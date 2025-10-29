@@ -1,0 +1,627 @@
+﻿id,nama,tipe_soal,pertanyaan,jawaban,true_score,aes_score,max_score,question_type_model,evaluation,retrieval_mode
+1,Gendis Ismi Aisyah,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,Kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+2,Gendis Ismi Aisyah,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,Lambung,2,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: pencernaan protein",sparse
+3,Gendis Ismi Aisyah,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,Gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerakan peristaltik",sparse
+4,Gendis Ismi Aisyah,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,Usus halus yaitu getah pankreas,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: Usus halus",sparse
+5,Gendis Ismi Aisyah,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",Usus buntu,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: infeksi bakteri atau virus pada usus",sparse
+6,Gendis Ismi Aisyah,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung : Bolus masuk ke lambung lalu lambung mengaduk makanan secara mekanik dan mencampur dengan enzim. HCl mematikan kuman, pepsin mengubah protein menjadi pepton, lalu bolus berubah menjadi kimus dan keluar ke usus halus.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: Lambung, Pepsin, Enzim renin, Asam klorida (HCl)",sparse
+7,Gendis Ismi Aisyah,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Bakwan masuk ke mulut, lalu mengalami pencernaan mekanik. Bakwan tersebut berubah menjadi halus. Lalu bolus masuk ke kerongkongan. Otot esofagus berkontraksi meremas bolus sehingga bolus masuk ke lambung. Otot lambung berkontraksi mengaduk-aduk bolus secara mekanik, lalu dicampur dengan enzim. HCL membasmi kuman, yang masuk bersama dengan makanan. Setelah mengalami pencernaan di lambung, bolus berubah menjadi bubus usus/ kimus. Lalu bolus masuk ke usus halus. Di usus halus terdapat dua belas jari yang menghubungkan duodenum dengan getah pankreas. Getah pankreas menghasilkan enzim tripsin, amilase, dan lipase. Tripsin memecah pepton menjadi asam amino. Amilase memecah amilum menjadi maltosa. Lipase memecah lemak menjadi asam lemak dan gliserol. Setelah masuk ke jejunum lalu makanan tersebut siap diserap di ileum",3,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: proses pencernaan, usus halus, nutrisi, pepton, amilum, lemak, asam amino, maltosa, asam lemak, gliserol, tripsin, amilase, lipase, enzim tripsin, enzim amilase, enzim lipase, usus dua belas jari, usus halus, ileum",sparse
+8,Gendis Ismi Aisyah,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin A disimpan dalam tubuh, kalau berlebihan bisa beracun. Vitamin C larut air sehingga kelebihan akan keluar melalui urin.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin A, vitamin C, kadar tinggi",sparse
+9,Gendis Ismi Aisyah,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Di mulut terjadi pencernaan karbohidrat oleh enzim ptialin/amilase menjadi maltosa yang menyebabkan rasa manis.,4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: amilase, maltosa, rasa manis",sparse
+10,Gendis Ismi Aisyah,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Proses pencernaan tidak berjalan dengan baik.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: proses pencernaan, enzim amilase, pankreas",sparse
+11,Kenzie Elviro Ramadhan,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,Kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+12,Kenzie Elviro Ramadhan,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,Lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+13,Kenzie Elviro Ramadhan,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,Peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: Peristaltik",sparse
+14,Kenzie Elviro Ramadhan,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,Pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: Pankreas, Lipase",sparse
+15,Kenzie Elviro Ramadhan,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",Usus buntu,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+16,Kenzie Elviro Ramadhan,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,Makanan dari kerongkongan ke lambung dicerna secara mekanik dengan gerak peristaltik dan kimiawi oleh asam lambung.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+17,Kenzie Elviro Ramadhan,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Bakwan dikunyah secara kimiawi dengan enzim amilase, diturunkan ke lambung lewat kerongkongan, Di lambung, tepung terigu di cerna dengan enzim amilase sehingga menjadi serat sehingga menjadi nutrisi karbohidrat. Wortel dan kol adalah sayuran sehingga dicerna dengan enzim amilase menjadi serat sehingga menjadi karbohidrat. Udang adalah hewan sehingga dicerna dengan asam amino menjadi protein hewani dan menjadi nutrisi protein.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan, enzim, usus halus, nutrisi",sparse
+18,Kenzie Elviro Ramadhan,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Karena jika vitamin A terlalu banyak maka akan merusak saraf pada tubuh.,2,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: vitamin A",sparse
+19,Kenzie Elviro Ramadhan,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Enzim amilase (ptialin) mengubah gula pada roti menjadi glukosa yang menyebabkan rasa manis di mulut.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, glukosa, rasa manis",sparse
+20,Kenzie Elviro Ramadhan,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Pada pencernaan makanan seperti nasi, gandum, dan sayuran akan sulit dicerna menjadi karbohidrat sehingga penyerapan gizi terganggu.",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan makanan, penyerapan gizi, amilase, pankreas",sparse
+21,Rashida Rona N.,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,Kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+22,Rashida Rona N.,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,Mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: organ pencernaan protein secara kimiawi",sparse
+23,Rashida Rona N.,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,Peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: Peristaltik",sparse
+24,Rashida Rona N.,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,Hati (empedu),0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: Hati",sparse
+25,Rashida Rona N.,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",Typhus,2,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: infeksi bakteri/virus, gangguan pencernaan",sparse
+26,Rashida Rona N.,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,Dicerna oleh enzim lipase: lemak menjadi asam lemak dan gliserol. HCl membunuh kuman. Pepsin mengubah protein menjadi pepton. Renin mengendapkan susu/kasein.,2,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: lambung, lemak, asam lemak, gliserol, pepsin, pepton, renin",sparse
+27,Rashida Rona N.,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Proses pencernaan bakwan udang dimulai di mulut, di mana pati dari tepung terigu dicerna oleh enzim amilase atau ptialin menjadi gula sederhana. Selanjutnya, makanan digerakkan oleh kerongkongan menuju lambung. Di lambung, protein yang berasal dari telur dan udang diubah oleh enzim pepsin menjadi peptida, sedangkan lemak dipecah oleh enzim lipase menjadi asam lemak dan gliserol. Asam lambung (HCl) berfungsi membunuh kuman dan membantu kerja enzim. Setelah itu, makanan masuk ke usus halus. Di sana, enzim tripsin mengubah peptida menjadi asam amino, amilase melanjutkan pencernaan karbohidrat menjadi fruktosa, sukrosa, dan glukosa, sementara lipase kembali memecah lemak menjadi asam lemak dan gliserol. Semua hasil pencernaan ini kemudian diserap oleh vili di dinding usus halus. Gula sederhana seperti fruktosa, sukrosa, dan glukosa dialirkan ke hati melalui pembuluh darah untuk diubah menjadi energi, asam lemak dan gliserol disalurkan ke hati untuk disimpan atau dimanfaatkan sebagai sumber energi, dan asam amino dari protein juga dialirkan ke hati sebelum diedarkan ke seluruh tubuh.",2,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: proses pencernaan, enzim pencernaan, usus halus, penyerapan nutrisi
+
+Jawaban siswa secara lengkap dan akurat menjelaskan proses pencernaan bakwan udang di mulut, lambung, dan usus halus. Siswa juga menjelaskan peran enzim pencernaan seperti amilase, pepsin, tripsin, dan lipase dalam mencerna karbohidrat, protein, dan lemak. Selain itu, siswa juga menjelaskan penyerapan nutrisi di usus halus dan cara nutrisi tersebut diserap oleh vili dan dibawa ke hati untuk diubah menjadi energi atau disimpan.",sparse
+28,Rashida Rona N.,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Karena vitamin A disimpan dalam tubuh dan jika berlebihan dapat merusak saraf. Vitamin C larut air sehingga kelebihannya dikeluarkan lewat urin.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin A, vitamin C",sparse
+29,Rashida Rona N.,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Karena roti dikunyah dan terkena air liur yang mengandung enzim ptialin yang mengubah pati menjadi gula sederhana.,4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: ptialin, maltosa, gula sederhana, amilum",sparse
+30,Rashida Rona N.,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Makanan sulit diserap, gizi berkurang, berat badan menurun, kembung, pencernaan tidak lancar, susah BAB.",4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: amilase, proses pencernaan makanan, penyerapan gizi",sparse
+31,Ahmad Abidilah Syarasuddin,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,Kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: Pencernaan kimiawi",sparse
+32,Ahmad Abidilah Syarasuddin,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,Mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: Organ pencernaan, Mulut",sparse
+33,Ahmad Abidilah Syarasuddin,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,"Kerlip (tidak jelas, kemungkinan maksudnya peristaltik)",0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+34,Ahmad Abidilah Syarasuddin,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,Hati,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: hati, lipase, mengemulsikan",sparse
+35,Ahmad Abidilah Syarasuddin,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",Diare,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: diare",sparse
+36,Ahmad Abidilah Syarasuddin,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung, Makanan tercerna secara kimiawi dengan asam lambung, lalu makanan yang tidak tercerna oleh lambung menuju ke organ lainnya.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, pencernaan kimiawi
+
+Jawaban siswa sudah menjelaskan organ yang ditunjukkan nomor 4 yaitu lambung, namun masih kurang detail dalam menjelaskan proses pencernaan makanan yang terjadi di dalamnya. Siswa hanya menyebutkan bahwa makanan tercerna secara kimiawi dengan asam lambung, tetapi tidak menjelaskan secara lengkap proses pencernaan kimiawi tersebut.",sparse
+37,Ahmad Abidilah Syarasuddin,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Protein yang terkandung dalam bakwan berubah menjadi asam amino di mulut, lalu dicerna di lambung, dan nutrisi diserap oleh usus halus.",2,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: proses pencernaan, nutrisi, usus halus, asam amino",sparse
+38,Ahmad Abidilah Syarasuddin,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Dapat disebabkan oleh peminat vitamin C lebih banyak dari peminat vitamin A,1,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin A, vitamin C, peminat",sparse
+39,Ahmad Abidilah Syarasuddin,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Karbohidrat dalam roti diubah menjadi glukosa yang memiliki rasa manis.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: glukosa, rasa manis, pencernaan kimiawi, saliva",sparse
+40,Ahmad Abidilah Syarasuddin,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Penyerapan gizi dan proses pencernaan menjadi kurang maksimal.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: proses pencernaan, enzim amilase, penyerapan gizi",sparse
+41,Ruhana Fadhila Balqis,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,Kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+42,Ruhana Fadhila Balqis,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,Lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+43,Ruhana Fadhila Balqis,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,Peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+44,Ruhana Fadhila Balqis,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,Hati,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lipase, hati",sparse
+45,Ruhana Fadhila Balqis,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",Tipes,2,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+46,Ruhana Fadhila Balqis,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Pencernaan di lambung terjadi secara kimiawi dan mekanik. Secara kimiawi menggunakan tiga enzim yaitu amilase yang mengubah tepung menjadi zat gula (glukosa), pepsin yang mengubah protein menjadi pepton, dan renin yang mengubah susu menjadi lemak. Secara mekanik dilakukan oleh dinding lambung.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, pencernaan makanan, mekanik, kimiawi",sparse
+47,Ruhana Fadhila Balqis,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Di usus halus terdapat tiga enzim yaitu lipase, tripsin, dan amilase. Lipase memecah lemak menjadi asam lemak, tripsin memecah pepton menjadi asam amino, dan amilase mengubah zat tepung menjadi gula yang semuanya terjadi di usus 12 jari. Setelah itu, hasilnya masuk ke jejunum diserap lalu masuk ke ileum dan diserap sisa-sisa nutrisi yang ada.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan, usus halus, enzim, nutrisi",sparse
+48,Ruhana Fadhila Balqis,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin C lebih mudah dikarenakan vitamin C itu seperti lemon, sedangkan vitamin A lebih sulit karena vitamin A kebanyakan berada  di sayur seperti wortel.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin C, vitamin A",sparse
+49,Ruhana Fadhila Balqis,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Di mulut terjadi pencernaan secara kimiawi dan mekanik. Secara kimiawi, enzim ptialin mengubah zat tepung menjadi zat gula, sedangkan secara mekanik menggunakan gigi.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan kimiawi, enzim ptialin, rasa manis",sparse
+50,Ruhana Fadhila Balqis,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Tubuh akan lemas karena kekurangan karbohidrat sebagai sumber energi utama.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, proses pencernaan, penyerapan gizi",sparse
+51,Nisa Sholichatul Hidayah,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,Kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+52,Nisa Sholichatul Hidayah,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,Lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+53,Nisa Sholichatul Hidayah,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,Gerak Peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerakan peristaltik",sparse
+54,Nisa Sholichatul Hidayah,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,Usus Halus,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: usus halus",sparse
+55,Nisa Sholichatul Hidayah,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",Typus,2,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+56,Nisa Sholichatul Hidayah,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung secara mekanik yaitu otot lambung bergerak mmengaduk bolus. Sedangkan secara kimiawi yaitu bolus bercampur dengan getah lambung (HCL, tripsin, renin).  HCL atau asam amino berfungsi mengubah karbohidrat menjadi glukosa, renin berfungsi mengubah susu menjadi lemak, dan tripsin berfungsi mengubah protein menjadi pepton.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, pencernaan kimiawi, getah lambung, pepsin, renin, tripsin",sparse
+57,Nisa Sholichatul Hidayah,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",Tepung terigu dicerna secara mekanik di mulut dan di lambung (mengunyahnya di mulut dan diaduk sehingga bercanpur dengan bolus). Potongan sayuran gizi/airnya diserap di usus halus. Udang dicerna di lambung (enzim renin) dirubah menjadi pepton. Minyak sawir dicernna di usus halus dilakukan secara 2x.,2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan mekanik, pencernaan kimia, usus halus",sparse
+58,Nisa Sholichatul Hidayah,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena banyak sumber buah maupun sayur yang mengandung vitamin C, sedangkan sedikit sumber buah maupun sayur yang mengandung vitamin A.",1,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin C, vitamin A",sparse
+59,Nisa Sholichatul Hidayah,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Di mulut terjadi pencernaan secara mekanik dan kimiawi. Secara mekanik dilakukan oleh gigi dan lidah, sedangkan secara kimiawi enzim ptialin mengubah karbohidrat menjadi gula sederhana sehingga terasa manis.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan kimiawi, enzim ptialin, karbohidrat, gula sederhana",sparse
+60,Nisa Sholichatul Hidayah,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Tubuh menjadi lemas, mudah mengantuk, cepat capek, dan kurang bersemangat karena kekurangan energi dari karbohidrat yang tidak tercerna sempurna.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: enzim amilase, proses pencernaan makanan, penyerapan gizi",sparse
+61,Assyiqa Raihanun Firyanto,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+62,Assyiqa Raihanun Firyanto,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+63,Assyiqa Raihanun Firyanto,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerak peristaltik",sparse
+64,Assyiqa Raihanun Firyanto,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+65,Assyiqa Raihanun Firyanto,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",typus,2,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+66,Assyiqa Raihanun Firyanto,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,organ lambung. bolus masuk ke lambung dicerna secara mekanik dan kimiawi dengan bantuan enzim HCL (untuk membunuh kuman dan bakteri) serta enzim pepsin untuk merubah protein menjadi pepton.,4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: lambung, pencernaan mekanis, pencernaan kimiawi, enzim pepsin, asam klorida, bolus",sparse
+67,Assyiqa Raihanun Firyanto,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","makanan dicerna secara mekanik di mulut. lalu akan digiling masuk ke lambung melalui kerongkongan. makanan masuk ke lambung dalam bentuk bolus, ada lambung udang yang mengandung protein akan dicerna oleh enzim pepsin. setelah itu, makanan masuk ke usus duodenum untuk dicerna dengan bantuan enzim dari pankreas serta empedu dari hati (pepton akan berubah jadi asam amino), kemudian masuk ke usus jejunum. disini, wortel dan kol yang mengandung serat akan diserap. makanan masuk ke usus ileum. disini makanan akan diserap karbo dan asam amino darah, sedangkan asam lemak dan gliserol dibawa oleh pembuluh limfa. tamat ^^",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan, usus halus, empedu, pankreas, usus duodenum, usus jejunum, usus ileum",sparse
+68,Assyiqa Raihanun Firyanto,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","vitamin C akan larut dalam air dan kelebihannya akan dibuang lewat urine. sedangkan vitamin A tidak dapat larut dalam air, vitamin A akan larut dalam lemak. vitamin yang larut dalam lemak akan disimpan relatif lebih lama di dalam tubuh, jika vitamin yang larut dalam lemak dikonsumsi dengan dosis tinggi, ada kemungkinan tubuh kita akan mengalami overdosis. (kurang tahu bu, pokoknya intinya gitu :^)",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin C, vitamin A, larut dalam air, larut dalam lemak, overdosis",sparse
+69,Assyiqa Raihanun Firyanto,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",hal ini dikarenakan enzim ptialin yang ada di dalam mulut karbohidrat akan bertemu enzim ptialin dan berubah menjadi gula sederhana atau glukosa sehingga menghasilkan rasa manis.,4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: enzim ptialin, amilum, maltosa, glukosa, rasa manis",sparse
+70,Assyiqa Raihanun Firyanto,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,tidak bisa/kemampuan mencerna zat amilum berkurang.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase",sparse
+71,M. Sakhi Putra El Rafif,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,Kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+72,M. Sakhi Putra El Rafif,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,Lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+73,M. Sakhi Putra El Rafif,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,Peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+74,M. Sakhi Putra El Rafif,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,Pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+75,M. Sakhi Putra El Rafif,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",Diare,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: Diare",sparse
+76,M. Sakhi Putra El Rafif,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung : Proses Pencernaan Kimiawi dan mekanik dengan bantuan enzim pepsin, renin, HCl",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, proses pencernaan kimiawi, enzim pepsin, renin, HCl",sparse
+77,M. Sakhi Putra El Rafif,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Bakwan udangnya masuk ke mulut tepung terigu mulai dicerna di mulut oleh amilase lalu udang yang telah menjadi bolus masuk ke lambung dan dalam enzim pepsin lalu saat di usus halus tepung terigu dan minyak sawit dicerna lagi oleh enzim lipase, amilase, tripsin setelah itu diserap usus halus dan mulai diedarkan ke seluruh tubuh.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: amilase, lipase, tripsin, pencernaan, usus halus",sparse
+78,M. Sakhi Putra El Rafif,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Vitamin C adalah vitamin bisa diserap/larut dengan air, dan vitamin A adalah vitamin yang hanya larut bersama dengan lemak.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin A, vitamin C, larut air, larut lemak",sparse
+79,M. Sakhi Putra El Rafif,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Saat roti masuk ke mulut enzim amilase mencerna karena merupakan karbohidrat diubah menjadi maltosa yang juga sebagai gula, dan lidah bagian depan dapat merasakan manis karena tidak ditelan.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: enzim amilase, maltosa, manis
+
+Jawaban siswa menyebutkan bahwa enzim amilase yang terdapat di mulut dapat mencerna karbohidrat pada roti menjadi maltosa, yang merupakan gula yang dapat menyebabkan rasa manis. Ini sesuai dengan konsep pencernaan karbohidrat di mulut melalui enzim amilase, sehingga siswa mendapatkan skor 2.",sparse
+80,M. Sakhi Putra El Rafif,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Orang itu akan lemas/lesu, karena produksi amilase berkurang maka penyerapan karbohidrat akan berhambat dan tidak maksimal. Yaitu fungsi karbohidrat sebagai makronutrien untuk sumber energi utama untuk seluruh tubuh.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: amilase, pankreas, proses pencernaan, penyerapan gizi",sparse
+81,Gineung Patridina Yudo,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+82,Gineung Patridina Yudo,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+83,Gineung Patridina Yudo,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+84,Gineung Patridina Yudo,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,organ pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lipase, organ pankreas",sparse
+85,Gineung Patridina Yudo,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",typus,2,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+86,Gineung Patridina Yudo,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"lambung, lambung mencerna protein secara mekanik lalu kimiawi secara kimiawi, lambung menghasilkan enzim HCL, renin dan pepsin yang mengubah protein menjadi pepton.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, mekanis, kimiawi",sparse
+87,Gineung Patridina Yudo,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","mulut akan mengunyah bakwan udang, lalu ludah mengeluarkan enzim ptialin yang mengubah amilum menjadi maltosa, kemudian hasil tersebut akan turun lewat esophagus menuju lambung, kemudian protein dari bakwan yaitu sayuran akan diubah menjadi pepton, setelah itu hati akan mengemulsikan lemak dari bakwan udang yaitu minyak sawit, kemudian pankreas akan mencerna secara kimiawi dengan enzim natrium bikarbonat, amilase, tripsin, dan lipase setelah itu hasil pencernaan pankreas turun ke usus halus dan diserap.",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan makanan, enzim pencernaan, usus halus",sparse
+88,Gineung Patridina Yudo,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","alasan vitamin A kadar tinggi tidak dijual secara bebas karena vitamin A bisa terlarut oleh lemak. jika vitamin A dijual secara bebas & dengan kadar tinggi, dikhawatirkan lemak tidak bisa melarutkan vitamin A kadar tinggi.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin A, kadar tinggi, lemak",sparse
+89,Gineung Patridina Yudo,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","roti mengandung karbohidrat yang memicu enzim ptialin di ludah mengubah amilum menjadi maltosa dan glukosa, sehingga dapat merasakan manis setelah beberapa saat.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: ptialin, amilum, maltosa, glukosa",sparse
+90,Gineung Patridina Yudo,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,kurang maksimal untuk mengubah amilum menjadi maltosa dan glukosa.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, pencernaan makanan, penyerapan gizi",sparse
+91,Nadila Oka Alexandra,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+92,Nadila Oka Alexandra,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: mulut",sparse
+93,Nadila Oka Alexandra,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerak peristaltik
+
+Skor 2 diberikan karena jawaban siswa (""gerak peristaltik"") sesuai dengan konsep utama pada referensi yang diberikan, yaitu gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan.",sparse
+94,Nadila Oka Alexandra,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,organ kelenjar C (hati),0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: hati",sparse
+95,Nadila Oka Alexandra,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",typus / tipes / diare,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: diare",sparse
+96,Nadila Oka Alexandra,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"dari esophagus (kerongkongan) makanan turun ke lambung dan di lambung makanan dihancurkan oleh otot lambung lalu ada 3 enzim yang membantu yaitu enzim lipase : lemak ? gliserol, renin : susu ? kasein, HCL : membunuh kuman, lalu turun ke usus. ",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, otot lambung, asam klorida (HCl), enzim pepsin, enzim renin, pencernaan mekanis dan kimiawi.",sparse
+97,Nadila Oka Alexandra,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","makanan dicerna dan dihancurkan oleh lambung lalu ditelan menuju esophagus dan turun ke usus halus ada 3 jalur sesuai penamaan yaitu : duodenum (usus 12 jari) mencerna makanan, jejunum (usus kosong) menyerap nutrisi pada makanan dan ileum (usus penyerapan) menyerap sisa nutrisi makanan atau zat. di lambung dibantu 3 enzim, lipase, renin, HCL (lemak-gliserol, hasil susu-kasein, membunuh kuman)",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan, usus halus, nutrisi, energi, perkembangan sel",sparse
+98,Nadila Oka Alexandra,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","karena vitamin C mudah larut dalam air, namun vitamin A susah / tidak larut dalam air.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: larut dalam air",sparse
+99,Nadila Oka Alexandra,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","saat mengunyah gerak mekanik terjadi dan menghasilkan makanan setelah itu disalurkan dan lidah menyemprotkan enzim dg pd makanan yang sudah halus. enzim ptialin amilare / amilum - polisakarida - disakarida - monosakarida, dg begitu enzim amilare / ptialin memberi rasa pada makanan dan disalurkan ke otak (agar tahu rasanya).",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: enzim ptialin, amilase, rasa manis, proses pencernaan",sparse
+100,Nadila Oka Alexandra,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"dampak : kurang bisa merasakan rasa makanan (pencernaan), tidak dapat mengubah amilum (penyerapan gizi), kurangnya rasa ingin makan (penyerapan gizi).",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: amilase, pankreas, pencernaan, penyerapan gizi",sparse
+101,Dayita Butsana,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+102,Dayita Butsana,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+103,Dayita Butsana,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerak peristaltik",sparse
+104,Dayita Butsana,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+105,Dayita Butsana,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",apendisitis,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: apendisitis",sparse
+106,Dayita Butsana,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"yaitu lambung yang terjadi proses pencernaan secara kimiawi. makanan masuk dalam lambung dan dihancurkan oleh asam lambung. enzim yang ada pada lambung memiliki tugas masing-masing. enzim yang ada pada lambung yaitu pepsin, renin, dan HCL.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, proses pencernaan kimiawi, enzim pepsin, renin, HCL",sparse
+107,Dayita Butsana,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",tepung terigu diubah oleh enzim ptialin dalam mulut setelah itu diubah oleh enzim amilase menjadi maltosa. Maltosa kemudian diubah menjadi glukosa oleh enzim maltase baru bisa diserap oleh usus halus. Udang : dalam lambung diubah oleh enzim pepsin menjadi pepton kemudia dalam usus halus diubah oleh enzim tripsin agar bisa diserap oleh usus halus. Sayuran : tidak memerlikan bantan enzim sehingga dapat langsung diserap oleh usus halus.,4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: pencernaan, enzim, usus halus, nutrisi, makanan",sparse
+108,Dayita Butsana,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",karena jika kebanyakan mengonsumsi vitamin A dapat menyebabkan overdosis yang bisa membahayakan tubuh.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: overdosis, vitamin A",sparse
+109,Dayita Butsana,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",terjadi proses enzim ptialin yang mengubah karbohidrat menjadi gula sederhana sehingga tercipta rasa manis dalam mulut.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: enzim ptialin, karbohidrat, gula sederhana, rasa manis",sparse
+110,Dayita Butsana,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,sehingga amilum tidak bisa diubah menjadi maltosa yang mengakibatkan penyerapan gizi menjadi kurang maksimal.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, amilum, maltosa, pencernaan makanan, penyerapan gizi",sparse
+111,Avae Qirani Eudocia,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+112,Avae Qirani Eudocia,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,mulut,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: mulut",sparse
+113,Avae Qirani Eudocia,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+114,Avae Qirani Eudocia,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,hati,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: hati",sparse
+115,Avae Qirani Eudocia,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",usus buntu,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gangguan pencernaan",sparse
+116,Avae Qirani Eudocia,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,organ lambung : makanan mengalami pembusukan karena asam lambung.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, amilase, maltosa",sparse
+117,Avae Qirani Eudocia,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","tepung terigu menghasilkan protein, sayur seperti wortel & kol menghasilkan vitamin, lalu sepotong udang menghasilkan protein. bakwan akan mengalami proses pencernaan lalu nantinya nutrisi pada bakwan akan diserap oleh usus halus.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: proses pencernaan, nutrisi, usus halus",sparse
+118,Avae Qirani Eudocia,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",karena tablet yang mengandung vitamin A yang memiliki kadar yang tinggi dapat menyebabkan keracunan ataupun overdosis. sedangkan tablet atau minuman dengan kadar vitamin C yang tinggi nantinya akan terbuang ke urin.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin C, vitamin A",sparse
+119,Avae Qirani Eudocia,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","saat roti sedang ditahan di mulut, roti akan bercampur dengan air liur, dan sari-sari roti akan diserap oleh mulut. lalu terjadilah perubahan rasa roti yang awalnya manis menjadi tawar.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: Enzim amilase, Pencernaan kimiawi",sparse
+120,Avae Qirani Eudocia,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,pengaruh gizi pada makanan akan kurang. dan gizi yang seharusnya terserap pada pankreas akan mengalami pembusukan pada lambung.,2,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: produksi enzim amilase, pencernaan makanan, penyerapan gizi",sparse
+121,Arina Silvia Khairunnisa,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,Kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+122,Arina Silvia Khairunnisa,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,Mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: organ pencernaan",sparse
+123,Arina Silvia Khairunnisa,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,Pristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+124,Arina Silvia Khairunnisa,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,Hati,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: hati, lipase",sparse
+125,Arina Silvia Khairunnisa,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",Usus buntu,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gangguan pencernaan",sparse
+126,Arina Silvia Khairunnisa,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Organ lambung. Makanan mengalami pembusukan yang disebabkan oleh asam lambung, kemudian makanan disalurkan ke usus halus.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, proses pencernaan, pembusukan, asam lambung, usus halus",sparse
+127,Arina Silvia Khairunnisa,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Tepung terigu menghasilkan protein, wortel dan kol menghasilkan vitamin, udang menghasilkan protein. Bakwan mengalami proses pencernaan pada umumnya sehingga nutrisi dapat diserap oleh usus halus.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan, bakwan udang, nutrisi, usus halus",sparse
+128,Arina Silvia Khairunnisa,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Vitamin A dengan kadar tinggi dapat mengandung racun, sedangkan vitamin C dengan kadar tinggi nantinya akan terbuang ke urine.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin A dan vitamin C",sparse
+129,Arina Silvia Khairunnisa,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Ketika roti ditahan di mulut, sari-sari roti akan diserap oleh mulut, maka akan ada perubahan rasa roti dari manis menjadi tawar.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pemanis, sari-sari roti, rasa manis, tawar",sparse
+130,Arina Silvia Khairunnisa,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Proses pencernaan makanan pada pankreas akan terganggu dan tidak berjalan lancar sebagaimana mestinya, dan penyerapan gizi makanan juga akan berkurang.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: amilase, pankreas, proses pencernaan",sparse
+131,Luvena Aqeela Anatandi,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+132,Luvena Aqeela Anatandi,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+133,Luvena Aqeela Anatandi,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerakan peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerakan peristaltik",sparse
+134,Luvena Aqeela Anatandi,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lipase, pankreas",sparse
+135,Luvena Aqeela Anatandi,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",diare,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: diare",sparse
+136,Luvena Aqeela Anatandi,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Nama organ tersebut adalah lambung. Di sini, makanan akan dicerna secara mekanik dan kimiawi. Di lambung, terdapat enzim-enzim yang membantu proses pencernaan secara kimiawi, yaitu HCL, pepsin, renin. Disini, protein diubah menjadi pepton oleh enzim pepsin. Zat-zat makanan di lambung akan dicerna secara mekanik menggunakan pergerakan otot dan bubur yang dihasilkan oleh enzim HCL, setelah itu proses pencernaan akan dilanjutkan di usus halus.",3,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: lambung, pencernaan mekanis, pencernaan kimiawi, HCL, pepsin, renin",sparse
+137,Luvena Aqeela Anatandi,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Makanan dicerna secara mekanik dan kimiawi terlebih dahulu di mulut. pati dalam tepung terigu akan dipecah menjadi gula sederhana. Protein di udang akan dicerna terlebih dahulu di lambung. Sehingga, nutrisi yang diserap di usus halus adalah amilium, peptin, vitamin B dan C.",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan makanan, nutrisi, usus halus",sparse
+138,Luvena Aqeela Anatandi,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin C dapat didapatkan dari buah-buahan atau sayuran tertentu. Sedangkan vitamin A, zatnya termasuk cukup sulit didapatkan  dari bahan makanan tertentu.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: vitamin C, vitamin A, kandungan, buah-buahan, sayuran",sparse
+139,Luvena Aqeela Anatandi,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Karna pati yang berada di di dalam roti tersebut diubah menjadi gula sederhana oleh enzim ptialin yang ada di air liur yang dihasilkan oleh kelenjar ludah di mulut.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: enzim ptialin, amilum, maltosa",sparse
+140,Luvena Aqeela Anatandi,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,proses penyerapan gizi menjadi terganggu karena banyak amilum yang tidak terubah menjadi disakarida/glukosa.,4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: amilase, pencernaan makanan, penyerapan gizi",sparse
+141,Azzahra Safa Putri,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+142,Azzahra Safa Putri,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+143,Azzahra Safa Putri,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+144,Azzahra Safa Putri,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,hati,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: hati",sparse
+145,Azzahra Safa Putri,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",usus buntu,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: usus buntu",sparse
+146,Azzahra Safa Putri,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung ? Tempat terjadinya pencernaan kimiawi pertama bagi protein yang dibantu oleh enzim pepsin yang mengubah protein menjadi pepton kemudian di ubah menjadi asam amino. Makan di dorong masuk ke dalam lambung dengan gerak peristaltik, kemudian HCL membasmi mikroorganisme, selain pepsin juga terdapat renin yang berguna untuk mengubah kasein menjadi endapan. Setelah proses pencernaan selesai hasilnya dibawa ke usus duodenum (usus dua belas jari).",3,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: lambung, pepsin, protein, pepton, asam amino, enzim renin, kasein, kimus, usus duodenum",sparse
+147,Azzahra Safa Putri,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Tepung akan diubah menjadi glukosa, sehingga glukosa akan mudah diserap. Kemudian, protein diubah menjadi pepton kemudian diubah menjadi asam amino.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan, tepung, glukosa, protein, pepton, asam amino",sparse
+148,Azzahra Safa Putri,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Karena vitamin A yang tinggi susah diserap.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: Vitamin A, Absorpsi",sparse
+149,Azzahra Safa Putri,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Diubah oleh enzim ptialin, karbo menjadi glukosa.",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: ptialin",sparse
+150,Azzahra Safa Putri,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Perubahan amilum menjadi maltosa akan terganggu.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, pencernaan makanan, penyerapan gizi",sparse
+151,Muhammad Rizqi Al Fajor,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,secara kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+152,Muhammad Rizqi Al Fajor,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: mulut",sparse
+153,Muhammad Rizqi Al Fajor,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+154,Muhammad Rizqi Al Fajor,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+155,Muhammad Rizqi Al Fajor,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",usus buntu,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+156,Muhammad Rizqi Al Fajor,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,Lambung. Proses pencernaan ketika makanan masuk lambung melewati esofagus lalu makanan yang di lambung akan dicerna oleh enzim pepsin dan renin untuk mencerna protein.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, enzim pepsin, renin",sparse
+157,Muhammad Rizqi Al Fajor,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",Makanan tersebut dicerna dulu di mulut dengan bantuan enzim ptialin untuk mengubah amilum menjadi maltosa lalu makanan akan di salurkan ke esofagus menuju lambung untuk mencerna protein dengan mengubah protein dalam udang menjadi pepton dengan bantuan enzim pepsin. Setelah itu makanan yang mengandung nutrisi (wortel dan kol) akan diserap oleh usus halus,2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan, enzim, usus halus, nutrisi",sparse
+158,Muhammad Rizqi Al Fajor,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Karena vitamin C mudah didapat dan dapat dicerna dalam skala besar.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin C",sparse
+159,Muhammad Rizqi Al Fajor,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Terdapat enzim ptialin/Amilase akan membuat amilum pada roti menjadi disakarida. Jadi karbohidrat pada roti tersebut akan di cerna oleh ptialin yang mengubah karbohidrat menjadi glukosa sehingga akan merasakan manis setelah beberapa saat.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: ptialin, amilase, disakarida, glukosa",sparse
+160,Muhammad Rizqi Al Fajor,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Dampaknya amilum pada usus halus yang tidak dicerna dengan baik akan mengganggu sistem pencernaan karena amilum yang tidak dicerna dengan baik sehingga menyebabkan sakit pada usus halus.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, proses pencernaan makanan, penyerapan gizi",sparse
+161,Faruq Zain Afiq,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+162,Faruq Zain Afiq,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: protein",sparse
+163,Faruq Zain Afiq,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+164,Faruq Zain Afiq,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+165,Faruq Zain Afiq,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",radang usus,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: radang usus",sparse
+166,Faruq Zain Afiq,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung  : waktu makanan masuk ke lambung akan dicerna secara kimiawi dengan 3 enzim yaitu HCL, renin, pepsin. HCL berfungsi untuk membunuh kuman, renin berfungsi mengendapkan protein pada susu, pepsin berfungsi untuk mengubah protein menjadi pepton.",3,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: lambung, pencernaan kimiawi, enzim (HCl, renin, pepsin)",sparse
+167,Faruq Zain Afiq,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",Tepung terigu akan diserap oleh amilase serta mengubah amilase menjadi maltosa. Udang akan diserap oleh enzim tripsin yang berguna untuk mengubah pepton menjadi asam amino.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, tripsin",sparse
+168,Faruq Zain Afiq,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Kemungkinan vitamin C kadar tinggi dibutuhkan dalam jumlah banyak sedangkan vitamin A tidak terlalu dibutuhkan.,2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: vitamin C, vitamin A",sparse
+169,Faruq Zain Afiq,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Roti mengandung karbohidrat jadi enzim yang mencerna yaitu enzim ptialin/amilase dengan cara mengubah amilum/karbohidrat menjadi maltosa.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: enzim ptialin/amilase, maltosa, rasa manis",sparse
+170,Faruq Zain Afiq,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Tubuh akan merasa lemas karena penyerapan karbohidrat tidak maksimal.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, enzim, pencernaan, penyerapan gizi",sparse
+171,Rauhilda Reihan Fahrezi,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+172,Rauhilda Reihan Fahrezi,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: organ pencernaan, pencernaan kimiawi, protein",sparse
+173,Rauhilda Reihan Fahrezi,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,peristaltik / mendorong makanan,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+174,Rauhilda Reihan Fahrezi,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas, lipase",sparse
+175,Rauhilda Reihan Fahrezi,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",usus buntu,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+176,Rauhilda Reihan Fahrezi,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung : Mekanik = Lambung akan menekan-nekan makanan yang ada di lambung. Kimiawi = terdapat HCL, Pepsin, dan renin, HCL untuk membasmi kuman yang ada di dalam, pepsin mengubah protein menjadi pepton dan renin untuk mengendapkan protein susu",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, pencernaan mekanis, kimiawi, asam klorida (HCl), enzim pepsin, enzim renin",sparse
+177,Rauhilda Reihan Fahrezi,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Tepung terigu karena terdapat enzim amilase yang mengubah amilum menjadi maltosa, udang karena terdapat enzim tripsin yang mengubah pepton menjadi asam amino.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: enzim pencernaan, amilase, tripsin, lemak, gliserol, maltosa, asam lemak, pepton, polipeptida, protein, asam amino, kimus, usus dua belas jari, usus halus, getah empedu, kantung empedu, pankreas, lipase, renyin.",sparse
+178,Rauhilda Reihan Fahrezi,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin C larut dengan air jika kebanyakan akan dikeluarkan oleh urnie, karena vitamin A larut dengan lemak jika kebanyakan vitamin A makan tubuh kekurangan lendir karena vitamin A larut dengan lemak",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: larut dalam air, larut dalam lemak",sparse
+179,Rauhilda Reihan Fahrezi,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Roti merupakan makanan karbohidrat. Dan di mulut terdapat enzim amilase yang mengubah amilum menjadi maltosa.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, maltosa, rasa manis
+
+Jawaban siswa menjelaskan proses enzimatis yang terjadi di mulut, yaitu amilase memecah amilum menjadi maltosa, yang terkait dengan perubahan rasa manis. Ini sesuai dengan referensi yang menyebutkan enzim amilase di mulut yang mengubah amilum menjadi maltosa.",sparse
+180,Rauhilda Reihan Fahrezi,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Tubuh akan kekurangan maltosa dan tubuh menjadi lemas karena kekurangan maltosa,4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: amilase, maltosa, proses pencernaan makanan, penyerapan gizi",sparse
+181,Muhammad Javas Aditya K.,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+182,Muhammad Javas Aditya K.,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,usus halus,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: usus halus",sparse
+183,Muhammad Javas Aditya K.,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerakan peristaltik",sparse
+184,Muhammad Javas Aditya K.,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+185,Muhammad Javas Aditya K.,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",diare,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: diare",sparse
+186,Muhammad Javas Aditya K.,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung di lambung makanan dicerna secara mekanik dan kimiawi, dan dibantu oleh beberapa enzim.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, pencernaan kimiawi",sparse
+187,Muhammad Javas Aditya K.,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Bakwan udang dimakan masuk ke dalam mulut lalu dikunyah menjadi potongan kecil yang disebut dengan bolus masuk ke kerongkongan lalu diterjang masuk ke lambung, di lambung makanan dicerna secara mekanik dan kimiawi menjadi lebih kecil lalu makanan masuk ke usus halus di usus halus udang dan bakwan udang diserap lalu masuk ke usus besar terdapat pembusukan sisa-sisa makanan sisa-sisa makanan disimpan didalam usus besar makanan keluar lewat anus dan biasa disebut dengan istilah BAB.tindakan",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan, usus halus, usus besar, bakteri Escherichia coli, vitamin K dan B12",sparse
+188,Muhammad Javas Aditya K.,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Dengan tablet vitamin C yang marak dijual sedangkan vitamin A tidak ada maka banyak orang mengalami sakit mata,2,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: vitamin C, vitamin A",sparse
+189,Muhammad Javas Aditya K.,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Roti dicerna secara mekanik dan kimiawi mekaniknya adalah mengunyah dengan gigi lalu dicerna secara kimiawi adalah terdapat bantuan dari enzim amilase yang mengubah karbohidrat dengan meninggalkan kandungan gula atau glukosa.,4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: amilase, karbohidrat, glukosa, rasa manis
+
+Jawaban siswa sudah menjawab inti soal tentang proses enzimatis yang terjadi saat seseorang mengunyah roti dan menahan rasa manis yang dihasilkan, yaitu dengan bantuan enzim amilase yang mengubah karbohidrat menjadi glukosa. Namun, jawaban siswa masih kurang detail dalam menjelaskan proses tersebut, sehingga skor diberikan 3.",sparse
+190,Muhammad Javas Aditya K.,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Penyerapan karbohidrat berkurang karena enzim amilase. Enzim amilase berperan sebagai penyerapan karbohidrat.,3,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: enzim amilase, pankreas, pencernaan makanan, penyerapan gizi",sparse
+191,Moch. Fairuz Atha Febriansyah,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+192,Moch. Fairuz Atha Febriansyah,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,usus halus,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: usus halus",sparse
+193,Moch. Fairuz Atha Febriansyah,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerakan peristaltik",sparse
+194,Moch. Fairuz Atha Febriansyah,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+195,Moch. Fairuz Atha Febriansyah,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",diare,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: diare",sparse
+196,Moch. Fairuz Atha Febriansyah,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung, di lambung terjadi proses pencernaan secara mekanik dan kimiawi.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, pencernaan mekanis, pencernaan kimiawi",sparse
+197,Moch. Fairuz Atha Febriansyah,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Makanan masuk ke mulut dan dikunyah menjadi potongan kecil yang biasa disebut bolus, masuk ke kerongkongan dan dorong dengan gerak peristaltik untuk masuk ke lambung. Di lambung makanan dicerna secara mekanik dan kimiawi. Setelah dari lambung makanan masuk ke usus halus dan nutrisinya diserap. lalu sisanya masuk ke usus besar untuk diambil kadar airnya dan melakukan pembusukan. Setelah itu sisa sisanya disimpan di rektum dan akan dikeluarkan melalui anus berupa feses.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: proses pencernaan, usus halus, nutrisi",sparse
+198,Moch. Fairuz Atha Febriansyah,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Karena penggunaan vitamin A kadar tinggi perlu pengawasan ahli yang memungkinkan efek samping berat. Sedangkan vit C tidak menyebabkan efek samping berat.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: Vitamin A, Vitamin C, efek samping berat",sparse
+199,Moch. Fairuz Atha Febriansyah,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Roti yang berada di mulut terdapat 2 proses yaitu mekanik dan kimiawi. Proses mekaniknya adalah pengunyahan dan proses kimiawinya menggunakan enzim amilase yang berada di mulut menguraikan karbohidrat dan menyisakan glukosa, itulah yang menyebabkan perubahan rasa sesaat saat roti dikunyah dan ditahan.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: amilase, glukosa, proses enzimatis, pencernaan kimiawi",sparse
+200,Moch. Fairuz Atha Febriansyah,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Dampaknya adalah proses pencernaan menjadi terhambat karena enzim amilase berperan sebagai penyerap karbohidrat, jika enzimnya berkurang maka penyerapan menjadi terhambat dan tertahan di pankreas.",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: enzim amilase, proses pencernaan, penyerapan gizi
+
+Jawaban siswa salah karena menyebutkan bahwa enzim amilase berperan sebagai penyerap karbohidrat, padahal sebenarnya amilase adalah enzim yang berperan dalam mencerna amilum menjadi maltosa, sehingga penyerapan karbohidrat tidak terhambat. Selain itu, amilase tidak berperan di pankreas, melainkan di mulut.",sparse
+201,Azim Nur Ahmad El Zhafran,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+202,Azim Nur Ahmad El Zhafran,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: mulut",sparse
+203,Azim Nur Ahmad El Zhafran,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerak peristaltik",sparse
+204,Azim Nur Ahmad El Zhafran,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: enzim lipase, pankreas",sparse
+205,Azim Nur Ahmad El Zhafran,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",diare,2,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: diare
+
+Jawaban siswa tidak sesuai dengan referensi yang diberikan, karena diare bukanlah gangguan pencernaan yang disebabkan oleh infeksi bakteri atau virus pada usus.",sparse
+206,Azim Nur Ahmad El Zhafran,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung - membasmi kuman, mengubah protein menjadi pepton, mengendapkan protein susu. Perubahan bolus menjadi kimus.",2,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: lambung, pepton, renin, kimus, pencernaan kimiawi, enzim pepsin, amilase, maltosa, pencernaan mekanis, defekasi",sparse
+207,Azim Nur Ahmad El Zhafran,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Sepotong udang mengandung protein yang dapat diubah oleh pepsin, menjadi pepton di lambung, dirubah menjadi asam amino di usus halus lalu diserap dalam bentuk asam amino.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan, usus halus, asam amino.",sparse
+208,Azim Nur Ahmad El Zhafran,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin C dapat mudah diserap oleh air. Manusia bisa mendapatkan supply air yang sangat mudah, Vitamin A dapat diserap oleh lemak, jika vitamin A kadar tinggi diserap oleh manusia maka juga membutuhkan lemak yang banyak, mendapatkan lemak tidak semudah mendapatkan air.",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: absorbsi vitamin C oleh tubuh dan perbedaan absorbsi dengan vitamin A",sparse
+209,Azim Nur Ahmad El Zhafran,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Karena enzim ptialin dapat merubah amilum menjadi maltosa sehingga menghasilkan rasa manis.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pialin, amilum, maltosa",sparse
+210,Azim Nur Ahmad El Zhafran,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Enzim amilase dapat mengubah amilum menjadi maltosa untuk diserap. Jika rusak maka penyerapat karbohidrat menjadi tidak maksimal.,4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: amilase, proses pencernaan, penyerapan gizi",sparse
+211,Ashar Hibatul Izzah H,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+212,Ashar Hibatul Izzah H,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+213,Ashar Hibatul Izzah H,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak kinetik,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gerakan peristaltik",sparse
+214,Ashar Hibatul Izzah H,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: enzim lipase, pankreas",sparse
+215,Ashar Hibatul Izzah H,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",diare,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: diare",sparse
+216,Ashar Hibatul Izzah H,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung, Proses bertemu tripsin lalu dirubah menjadi pepton.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, pencernaan kimiawi, tripsin, pepton.",sparse
+217,Ashar Hibatul Izzah H,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan diatasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",Tepung -> dicerna di mulut -> usus halus Wortel dan kol -> mulut -> lambung -> usus halus Udang -> mulut -> Lambung -> usus halus,2,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: pencernaan, usus halus, enzim, empedu",sparse
+218,Ashar Hibatul Izzah H,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karna vitamin C itu semakin tinggi kadar semakin baik untuk tubuh, sedangkan vitamin A semakin tinggi kadarnya dapat memperburuk kondisi tubuh.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin C, vitamin A",sparse
+219,Ashar Hibatul Izzah H,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Pada saat enzim di mulut merubah karbo sekaligus memisah glukosa dari adonan, jadinya rasanya manis.",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: enzim, mulut, manis, glukosa",sparse
+220,Ashar Hibatul Izzah H,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Pencernaan makanan menjadi tidak stabil dikarenakan kelebihan lemak pada gizinya, sehingga bisa membuat tubuh buruk kondisinya.",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, pencernaan makanan, penyerapan gizi",sparse
+221,Wildan Fawwaz Muhammad,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+222,Wildan Fawwaz Muhammad,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+223,Wildan Fawwaz Muhammad,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,usus halus,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gerakan peristaltik, otot kerongkongan, saluran pencernaan",sparse
+224,Wildan Fawwaz Muhammad,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+225,Wildan Fawwaz Muhammad,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",sembelit,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+226,Wildan Fawwaz Muhammad,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung, lambung proses mengubah makanan menjadi bubur dengan proses pencernaan kimiawi dan mekanik.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, pencernaan kimiawi",sparse
+227,Wildan Fawwaz Muhammad,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",Tepung terigu ? proses pencernaan yang terjadi di mulut lalu ke usus halus. Potongan sayuran ? proses pencernaan yang terjadi di lambung lalu ke usus halus. Udang ? proses pencernaan yang terjadi mulai menuju ke lambung lalu menuju ke usus halus.,3,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: proses pencernaan, pencernaan mekanis, pencernaan kimiawi, usus halus",sparse
+228,Wildan Fawwaz Muhammad,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Karena minuman yang mengandung vitamin C lebih banyak digemari orang-orang daripada minuman yang mengandung vitamin A dan minuman yang mengandung vitamin C lebih mudah untuk diproduksi.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: Vitamin C, Vitamin A",sparse
+229,Wildan Fawwaz Muhammad,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Dengan mengunyah roti di mulut maka karbohidrat yang tidak ditelan untuk beberapa saat bercampur dengan saliva yang mengeluarkan rasa manis.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: penceernaan kimiawi, saliva, rasa manis",sparse
+230,Wildan Fawwaz Muhammad,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Makanan menjadi lebih susah dicerna, pengeluaran pencernaan makanan dan menjadi rusak, sumber energi utama menghilang.",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan, enzim amilase, pankreas, kerusakan pankreas",sparse
+231,Rizki Aditya Saputra,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+232,Rizki Aditya Saputra,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,mulut,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: mulut",sparse
+233,Rizki Aditya Saputra,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+234,Rizki Aditya Saputra,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+235,Rizki Aditya Saputra,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",mag,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+236,Rizki Aditya Saputra,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Nama organnya lambung. Proses pencernaan makanan banyak kedalam lambung dan dicerna secara mekanik dan kimiawi, secara mekanik seperti lambung diremas-remas dan kimiawi dengan enzim sampai larut dan ketika udah waktunya maka makanan itu akan keluar dari lambung.",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, pencernaan makanan, mekanik, kimiawi",sparse
+237,Rizki Aditya Saputra,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",banyaknya lemak yang diserap oleh usus halus,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: penyerapan lemak, usus halus",sparse
+238,Rizki Aditya Saputra,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",,0,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin A",sparse
+239,Rizki Aditya Saputra,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Makanan yang sudah di cerna secara mekanik akan juga dicerna dengan enzim enzim dalam mulut menjadikan karbohidrat menjadi glukosa.,4,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: enzim amilase",sparse
+240,Rizki Aditya Saputra,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Adanya kekurangan gizi dan proses pembuangan zat sisa akan menyebabkan bakteri munculnya penyakit,2,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: enzim amilase, proses pencernaan makanan, penyerapan gizi",sparse
+241,M. Afkar Zaki Faizin,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+242,M. Afkar Zaki Faizin,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+243,M. Afkar Zaki Faizin,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerakan peristaltik",sparse
+244,M. Afkar Zaki Faizin,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+245,M. Afkar Zaki Faizin,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",usus buntu,0,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+246,M. Afkar Zaki Faizin,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung, di lambung proses pencernaan dilakukan secara kimiawi dan mekanik, proses pencernaan dibantu dengan lambung dan proses secara kimiawi dibantu oleh enzim pepsin, HCL, renin.",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, pepsin, HCl, renin, pencernaan kimiawi, otot lambung, asam klorida",sparse
+247,M. Afkar Zaki Faizin,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Tepung terigu pertama kali dicerna dimulut dengan dibantu enzim ptialin (amilum ? maltosa) lalu dilanjutkan ke duodenum dan diangkut di usus halus nutrisi yang dapat diserap yaitu protein, vitamin.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan, usus halus, enzim pencernaan",sparse
+248,M. Afkar Zaki Faizin,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin C banyak dibutuhkan oleh tubuh dibanding vitamin A walaupun keduanya sangat penting, vitamin C lebih mudah didapat daripada vitamin A, dan vitamin bisa diproduksi skala yang besar.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin C, vitamin A",sparse
+249,M. Afkar Zaki Faizin,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Enzim amilase / ptialin yang mengubah amilum menjadi maltosa. Proses itu terjadi di mulut dan kita merasakan rasa manis setelah beberapa saat.,4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: amilase, ptialin, maltosa, rasa manis",sparse
+250,M. Afkar Zaki Faizin,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Dampaknya mengalami gangguan pada bagian pankreas produksi enzim amilase menjadi berkurang, enzim yang mengemulsikan lemak menjadi tidak sempurna bahkan tidak bisa bekerja dan gizi yang dibutuhkan oleh tubuh menjadi berkurang.",2,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: produksi enzim amilase, proses pencernaan makanan, penyerapan gizi",sparse
+251,Kirana Azalea Hakim,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+252,Kirana Azalea Hakim,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung kemudian usus halus,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+253,Kirana Azalea Hakim,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerakan peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerakan peristaltik
+
+Jawaban siswa ""gerakan peristaltik"" sama dengan konsep yang disebutkan dalam referensi, yaitu gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan.",sparse
+254,Kirana Azalea Hakim,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,hati,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: hati",sparse
+255,Kirana Azalea Hakim,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",typus / tipes,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: infeksi bakteri/virus, gangguan pencernaan, usus",sparse
+256,Kirana Azalea Hakim,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Nama organ nomor 4 adalah lambung, dimulai dari masuknya makanan dari kerongkongan menuju lambung, kemudian makanan memasuki pencernaan kimiawi yang berada pada lambung, ada 3 pencernaan kimiawi pada lambung. 1. Pepsin mengubah protein menjadi peptisida, 2. HCL membunuh kuman dan 3. Renin untuk menyerap nutrisi (berasal dari protein susu).",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, pencernaan kimiawi, pepsin, HCL, renin",sparse
+257,Kirana Azalea Hakim,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Mulut terjadi pada karbo yaitu tepung terigu, kemudian dipindahkan esofagus ke lambung. Di lambung terjadi pencernaan kimiawi pada protein (udang) dan karbo (tepung terigu). Kemudian masuk ke usus halus yaitu dodenum (usus dua belas jari) disana lemak (minyak sawit) di emulsif oleh enzim lipase. Setelah itu masuk ke jejunum (usus kosong), disana terjadi pemecahan protein dengan enzim tripsin dari pepton ke asam amino.Kemudian diserap nutrisi yang terkandung. Kemudian ileum untuk menyerap sisa nutrisi.",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: proses pencernaan, enzim pencernaan, usus halus",sparse
+258,Kirana Azalea Hakim,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin mempunyai dosis yang tidak menentu, dan sulit larut dalam air. Namun vitamin C mudah larut dalam air.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin C, vitamin A",sparse
+259,Kirana Azalea Hakim,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Proses kimiawi yang terjadi di mulut pada karbo yaitu mengubah polisakarida menjadi disakarida, sehingga mengalami perubahan rasa roti yang berasa manis tersebut. Proses kimiawi polisakarida yaitu beberapa jenis gula menjadi disakarida 2 jenis gula. Mungkin karna meleburnya gula dari polisakarida menjadi disakarida.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi, poliglukan, disakarida, amilase",sparse
+260,Kirana Azalea Hakim,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,a. Amilum tidak tercerna dengan sempurna. b. Penyerapan gizi juga kurang maksimal. C. Amilum akan terpecah tetapi belum sepenuhnya.,4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: amilase, pencernaan makanan, penyerapan gizi, pankreas",sparse
+261,Angelia Putri Kharisma,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+262,Angelia Putri Kharisma,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+263,Angelia Putri Kharisma,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerakan peristaltis / peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+264,Angelia Putri Kharisma,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,hati,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: hati, lipase",sparse
+265,Angelia Putri Kharisma,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",penyakit tipes / tipus,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: penyakit tipes/tipus",sparse
+266,Angelia Putri Kharisma,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung, proses pencernaan makanan yang terjadi di lambung diawali dengan makanan yang datang dari lambung esofagus dengan bentuk bulat / lonjong dan di lambung makanan akan dihancurkan oleh beberapa enzim yang juga ada lambung. Makanan akan dihancurkan menjadi kecil-kecil dan terpisah dengan kandungan nutrisinya dan juga beberapa hal yang tidak dibutuhkan tubuh. Asam lambung berfungsi mematikan bakteri yang ikut masuk di dalam makanan. Setelah semua selesai diserap dan proses penfernaan makanan berproses ke organ selanjutnya.",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, proses pencernaan makanan, asam lambung, enzim, amilase, pati, maltosa
+
+Penjelasan:
+
+Jawaban siswa telah menjelaskan dengan cukup baik tentang organ lambung dan proses pencernaan makanan yang terjadi di dalamnya. Siswa telah menyebutkan bahwa proses pencernaan di lambung diawali dengan makanan yang datang dari esofagus dan dihancurkan oleh beberapa enzim, termasuk asam lambung yang berfungsi mematikan bakteri. Namun, siswa belum menyebutkan secara spesifik tentang amilase dan fungsinya dalam memecah pati menjadi maltosa. Selain itu, siswa juga belum menjelaskan secara lengkap tentang proses pencernaan makanan secara keseluruhan, hanya menyebutkan bahwa makanan dihancurkan menjadi kecil-kecil dan terpisah dengan kandungan nutrisinya.
+
+Dengan demikian, jawaban siswa mendapatkan skor 3, karena telah menjelaskan inti proses pencernaan makanan di lambung, tetapi masih kurang detail dan tidak mencakup seluruh poin penting sesuai referensi.",sparse
+267,Angelia Putri Kharisma,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",Masuk kedalam mulut mengalami percernaan secara mekanik dan kimiawi lalu ke esofagus makanan kemudian ke saluran pencernaan hingga selanjutnya ke lambung dan dihancurkan menjadi lembapan kecil oleh enzim dan asam lambung (menghilangkan bakteri yang ikut masuk lewat makanan dan lanjut ke usus halus kemudian ke usus besar lalu menyerap nutrisi yang ada.,2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: pencernaan, saluran pencernaan, organ pencernaan tambahan, enzim, asam lambung",sparse
+268,Angelia Putri Kharisma,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin A tidak dapat larut didalam air, sedangkan vitamin C mudah larut didalam air.",3,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: vitamin A, vitamin C, larut air, tidak larut air",sparse
+269,Angelia Putri Kharisma,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",Saat mengunyah makanan dimulut terjadi proses pencernaan secara kimiawi dan mekanik. Karena saat kita mengunyah terdapat enzim ptialin yang dihasilkan dari lidah yang membantu proses pencernaan dan menyebabkan terasa manis beberapa saat.,4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: ptialin, pencernaan kimiawi, rasa manis",sparse
+270,Angelia Putri Kharisma,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Dapat kondisi tersebut adalah mengalami gangguan pencernaan yaitukurangnya maksimal bekerjanya amilum yang mengubah menjadi maltosa.,3,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: amilase, gangguan pencernaan, penyerapan gizi",sparse
+271,Athira Maheswari R.,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+272,Athira Maheswari R.,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+273,Athira Maheswari R.,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,gerak peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gerak peristaltik",sparse
+274,Athira Maheswari R.,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,hati,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: hati",sparse
+275,Athira Maheswari R.,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",tipes,2,0,2,singkat,"1. Skor: 0
+2. Kata kunci penting: gangguan pencernaan",sparse
+276,Athira Maheswari R.,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Otot lambung berkontraksi mengaduk aduh bolus sampai menjadi kimus disebut dengan pencernaan mekanis, dilanjut dengan pencernaan kimiawi menggunakan getah lambung yang mengandung HCL, enzim renin, dan enzim pepsin. HCL : memusnahkan kuman dan mengaktifkan enzim pepsin. Enzim pepsin : mengubah protein menjadi pepton. Enzim renin : mengendapkan kasein.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, pencernaan mekanis, pencernaan kimiawi, HCl, enzim pepsin, enzim renin.",sparse
+277,Athira Maheswari R.,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",diawali bakwan dikunyah mulut lalu terkena enzim ptialin yang mengubah amilum menjadi maltosa. Bakwan menjadi bolus yang ditelan ke kerongkongan dengan gerak pristaltik. Bolus masuk lambung lalu alat lambung berkontraksi mengaduk-aduk bolus bakwan sampai jadi kimus dengan getah lambung dilanjut kimus masuk ke usus halus lalu dicerna lebih lanjut oleh usus halus menggunakan cairan empedu dan enzim.,3,1,4,panjang,"1. Skor: 1
+2. Kata kunci penting: pencernaan makanan, bakwan udang, enzim pencernaan, usus halus",sparse
+278,Athira Maheswari R.,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin C bisa larut dalam air dan keluar menjadi urine, sedangkan vitamin A larut dalam lemak, vitamin A jika kadarnya tinggi dapat menyebabkan overdosis yang bisa membuat keracunan.",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: kadar larut, vitamin A, vitamin C",sparse
+279,Athira Maheswari R.,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.",disebabkan oleh enzim amilase (ptialin) saat amilum dirubah menjadi maltosa.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, maltosa",sparse
+280,Athira Maheswari R.,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,dapat menyebabkan malnutrisi atau masalah pencernaan.,3,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: malnutrisi, masalah pencernaan, enzim amilase, pankreas, pencernaan makanan",sparse
+281,Decha Azqiya A.,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: kimiawi",sparse
+282,Decha Azqiya A.,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+283,Decha Azqiya A.,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+284,Decha Azqiya A.,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lipase, pankreas",sparse
+285,Decha Azqiya A.,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",usus buntu,0,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: gangguan pencernaan",sparse
+286,Decha Azqiya A.,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung, secara kimiawi HCL : membunuh bakteri. Pepsin : mengubah protein menjadi pepton. Renin : menyerap nutrisi dari susu.",2,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: lambung, pencernaan kimiawi, pepsin, renin",sparse
+287,Decha Azqiya A.,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.",Tepung terigu : di mulut diberi enzim ptialin sehingga berubah menjadi disakarida lalu melalui esofagus turun ke lambung lalu masuk usus halus diberi amilase sehingga menjadi monosakarida dan diserap ileum. Potongan sayuran : di kunyah di mulut lalu ke lambung di cerna di lambung lalu di serap di usus halus. Udang : di kunyah mulut turun ke lambung bertemu pepsin berubah menjadi pepton masuk lambung ketemu lipase berubah menjadi asam amino.,4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: pencernaan, tepung terigu, sayuran, udang, usus halus, enzim, pH lambung",sparse
+288,Decha Azqiya A.,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.",Karena vitamin A jika dikonsumsi dalam kadar yg sangat tinggi dpt menyebabkan efek yg negatif.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: vitamin A, efek negatif",sparse
+289,Decha Azqiya A.,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Mulut mengeluarkan ptialin (amilase) yang membuat roti itu manis karena hal itu dpt membuat glukosa,",4,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: ptialin, amilase, glukosa",sparse
+290,Decha Azqiya A.,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,Membuat kebutuhan karbo tubuh berkurang yang menyebabkan tubuh lemas karena usus halus tidak bisa menyerapnya karena karbo tersebut masih berbentuk disakarida.,3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: amilase, proses pencernaan makanan, penyerapan gizi",sparse
+291,Reyhan Falaha T.,singkat,Pencernaan yang terjadi dengan bantuan enzim disebut dengan pencernaan secara ��,kimiawi,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pencernaan kimiawi",sparse
+292,Reyhan Falaha T.,singkat,Proses pencernaan protein secara kimiawi dimulai pertama kali pada organ ��,lambung,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: lambung",sparse
+293,Reyhan Falaha T.,singkat,Gerakan otot kerongkongan dan usus yang mendorong makanan ke saluran pencernaan disebut dengan ��,peristaltik,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: peristaltik",sparse
+294,Reyhan Falaha T.,singkat,Enzim lipase adalah enzim yang bertugas untuk mengemulsikan lemak. Enzim lipase dihasilkan oleh organ yang disebut dengan ��,pankreas,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: pankreas",sparse
+295,Reyhan Falaha T.,singkat,"Akibat seseorang terkena infeksi bakteri atau virus pada ususnya, maka orang tersebut akan mengalami gangguan pencernaan yang disebut dengan ��",diare,2,2,2,singkat,"1. Skor: 2
+2. Kata kunci penting: diare",sparse
+296,Reyhan Falaha T.,panjang,Tuliskan nama organ yang ditunjukkan oleh nomor 4 (lambung) dan jelaskan proses pencernaan makanan yang terjadi di dalamnya.,"Lambung, proses pencernaan mekanik dan kimiawi bekerja dengan enzim HCL, Pepsin, Renin.",3,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: lambung, pencernaan mekanik, kimiawi, HCL, pepsin, renin",sparse
+297,Reyhan Falaha T.,panjang,"Seseorang memakan bakwan udang yang digoreng dengan minyak sawit. Bakwan terbuat dari tepung terigu, potongan sayuran berupa wortel dan kol, dan di atasnya terdapat sepotong udang. Bagaimana proses pencernaan terhadap makanan tersebut sehingga diperoleh nutrisi yang bisa diserap di usus halus? Jelaskan.","Bakwan udang masuk ke mulut, tepung terigu dicerna di mulut oleh amilase. Lalu sepotong udang yang sudah menjadi bolus masuk ke lambung dan dicerna oleh enzim pepsin. Kemudian di usus halus, udang, tepung terigu dan lemak juga empedu dari minyak sawit dicerna lagi oleh enzim lipase, amilase dan tripsin. Setelah dicerna baru diserap di usus halus juga dan mulai diedarkan di tubuh. Sedangkan untuk wortel dan kol akan dicerna di usus besar.",4,4,4,panjang,"1. Skor: 4
+2. Kata kunci penting: pencernaan, usus halus, enzim, lipase, amilase, tripsin, empedu, minyak sawit",sparse
+298,Reyhan Falaha T.,panjang,"Saat ini marak dijual tablet atau minuman yang mengandung vitamin C dengan kadar tinggi, tetapi tidak ada yang mengandung vitamin A kadar tinggi dijual secara bebas. Apakah alasan yang mendasari hal tersebut? Jelaskan.","Karena vitamin C adalah vitamin yang bisa larut dalam air, sehingga bisa dikonsumsi bersamaan dengan air. Tapi vitamin A adalah vitamin yang hanya bisa dilarutkan pada lemak.",3,2,4,panjang,"1. Skor: 2
+2. Kata kunci penting: larut dalam air, lemak, vitamin C, vitamin A",sparse
+299,Reyhan Falaha T.,panjang,"Saat seseorang mengunyah roti lalu menahannya di mulut tanpa ditelan, ia merasakan rasa manis setelah beberapa saat. Tuliskan proses enzimatis yang terjadi dan hubungkan dengan perubahan rasa tersebut.","Ketika seseorang memakan roti yang merupakan sumber karbohidrat dan masuk pada mulu, enzim amilase bekerja. Dengan merubah amilum menjadi maltosa yang terhitung sebagai gula. Bagian depan lidah mulai bekerja dengan merasakan rasa manis karena tidak ditelan.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: amilase, maltosa, rasa manis",sparse
+300,Reyhan Falaha T.,panjang,Seseorang mengalami kerusakan pada pankreas sehingga produksi enzim amilase berkurang. Tuliskan dampak kondisi tersebut terhadap proses pencernaan makanan dan penyerapan gizi.,"Seseorang itu akan merasa sedikit lesu, karena jika produksi enzim amilase berkurang maka penyerapan amilum akan sedikit terhambat dan tidak maksimal. Sebagaimana fungsi amilum/karbohidrat sebagai makronutrien yakni sumber energi utama untuk tubuh.",4,3,4,panjang,"1. Skor: 3
+2. Kata kunci penting: enzim amilase, produksi enzim amilase, proses pencernaan makanan, penyerapan gizi
+
+Jawaban siswa sudah menjawab inti soal, namun masih kurang detail. Meskipun siswa menyebutkan enzim amilase dan dampaknya pada proses pencernaan makanan, penjelasannya masih singkat dan tidak mencakup seluruh poin penting. Siswa hanya menyebutkan bahwa penyerapan amilum akan sedikit terhambat, tetapi tidak menjelaskan secara lebih rinci bagaimana hal ini mempengaruhi proses pencernaan dan penyerapan gizi secara keseluruhan.",sparse

@@ -1,0 +1,117 @@
+/* Fix styles untuk mengatasi masalah tampilan */
+
+/* Memastikan body memiliki background putih */
+body {
+  background-color: #F8FAFC !important;
+  color: #334155 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  display: block !important;
+  position: relative !important;
+}
+
+/* Reset untuk #app */
+#app {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  min-height: 100vh !important;
+  background-color: #F8FAFC !important;
+}
+
+/* Memastikan layout tetap full width */
+.app-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #F8FAFC !important;
+}
+
+/* Memperbaiki tampilan kartu */
+.card {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #E2E8F0 !important;
+  background-color: white !important;
+}
+
+/* Memperbaiki tampilan header */
+.app-header {
+  width: 100% !important;
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  padding: 1rem 2rem !important;
+}
+
+/* Memperbaiki tampilan footer */
+.app-footer {
+  width: 100% !important;
+  background-color: white !important;
+  padding: 1rem !important;
+}
+
+/* Memperbaiki tampilan konten */
+.app-content {
+  padding: 2rem !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  background-color: #F8FAFC !important;
+  min-height: 500px !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Memastikan RouterView menampilkan konten */
+.router-view-container {
+  display: block !important;
+  width: 100% !important;
+  min-height: 400px !important;
+}
+
+/* Memperbaiki tampilan menu */
+.app-menubar {
+  background-color: white !important;
+  border: none !important;
+  width: 100% !important;
+}
+
+.p-menubar {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.p-menubar-root-list {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Memperbaiki tampilan tombol */
+button, .p-button {
+  border-radius: 4px !important;
+}
+
+/* Memperbaiki tampilan link */
+a {
+  color: #3B82F6 !important;
+  text-decoration: none !important;
+}
+
+/* Memperbaiki tampilan tabel */
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+/* Memastikan tampilan responsif */
+@media (max-width: 768px) {
+  .app-content {
+    padding: 1rem !important;
+  }
+}

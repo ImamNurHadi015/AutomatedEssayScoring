@@ -1,0 +1,53 @@
+{
+  "total_answers": 300,
+  "total_time_seconds": 5713.242645263672,
+  "summary": [
+    {
+      "mode": "sparse",
+      "description": "Sparse BM25",
+      "question_type": "all",
+      "metrics": {
+        "exact_match": 0.5566666666666666,
+        "mae": 0.6566666666666666,
+        "qwk": 0.5680106335844042,
+        "elapsed_seconds": 1958.8714854717255,
+        "answers_evaluated": 300,
+        "question_type_filter": "all"
+      },
+      "json_path": "results_sparse_rag.json",
+      "csv_path": "results_sparse_rag.csv"
+    },
+    {
+      "mode": "dense",
+      "description": "Dense DPR",
+      "question_type": "all",
+      "metrics": {
+        "exact_match": 0.5433333333333333,
+        "mae": 0.6566666666666666,
+        "qwk": 0.5676725695699314,
+        "elapsed_seconds": 1835.5185227394104,
+        "answers_evaluated": 300,
+        "question_type_filter": "all"
+      },
+      "json_path": "results_dense_rag.json",
+      "csv_path": "results_dense_rag.csv"
+    },
+    {
+      "mode": "hybrid",
+      "description": "Hybrid Sparse+Dense",
+      "question_type": "all",
+      "metrics": {
+        "exact_match": 0.5333333333333333,
+        "mae": 0.66,
+        "qwk": 0.5605728413490694,
+        "elapsed_seconds": 1842.276932001114,
+        "answers_evaluated": 300,
+        "question_type_filter": "all"
+      },
+      "json_path": "results_hybrid_rag.json",
+      "csv_path": "results_hybrid_rag.csv"
+    }
+  ],
+  "combined_results_csv": "results_all_modes.csv",
+  "generated_at": "2025-10-11 01:30:32"
+}
