@@ -89,6 +89,11 @@ export const sessionApi = {
     return axios.post('/sessions', sessionData)
   },
   
+  // Mendapatkan semua sesi
+  getAllSessions() {
+    return axios.get('/sessions')
+  },
+  
   // Mendapatkan detail sesi
   getSession(id) {
     return axios.get(`/sessions/${id}`)
@@ -107,6 +112,34 @@ export const sessionApi = {
   // Mendapatkan ringkasan hasil sesi
   getSessionSummary(sessionId) {
     return axios.get(`/sessions/${sessionId}/summary`)
+  }
+}
+
+// Student API
+export const studentApi = {
+  // Mendapatkan semua siswa
+  getAllStudents() {
+    return axios.get('/students')
+  },
+  
+  // Mendapatkan detail siswa berdasarkan ID
+  getStudent(id) {
+    return axios.get(`/students/${id}`)
+  },
+  
+  // Membuat siswa baru
+  createStudent(studentData) {
+    return axios.post('/students', studentData)
+  },
+  
+  // Memperbarui siswa
+  updateStudent(id, studentData) {
+    return axios.put(`/students/${id}`, studentData)
+  },
+  
+  // Menghapus siswa
+  deleteStudent(id) {
+    return axios.delete(`/students/${id}`)
   }
 }
 

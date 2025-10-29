@@ -15,7 +15,7 @@
     <template v-else>
       <div class="page-header">
         <div class="header-content">
-          <h1>Sesi Ujian: {{ session.exam_title }}</h1>
+          <h1>Sesi Ujian{{ session.exams && session.exams.length > 1 ? ' (Multiple)' : '' }}</h1>
           <p class="page-subtitle">
             Kode Sesi: <span class="session-code">{{ session.session_code }}</span>
           </p>
@@ -36,7 +36,16 @@
             <div class="session-info">
             <div class="info-item">
               <div class="info-label">Ujian</div>
-              <div class="info-value">{{ session.exam_title }}</div>
+              <div class="info-value" v-if="!session.exams || session.exams.length <= 1">
+                {{ session.exam_title }}
+              </div>
+              <div class="info-value" v-else>
+                <div class="exam-list">
+                  <div v-for="(exam, index) in session.exams" :key="exam.id" class="exam-item">
+                    {{ index + 1 }}. {{ exam.title }}
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="info-item">
               <div class="info-label">Jumlah Siswa</div>
@@ -75,11 +84,24 @@
                 <h3>Daftar Pertanyaan</h3>
                 
                 <div v-for="question in questions" :key="question.id" class="question-card">
-                  <div class="question-text">{{ question.question_text }}</div>
+                  <div class="question-header">
+                    <div>
+                      <div class="question-text">{{ question.question_text }}</div>
+                      <div class="question-meta">
+                        <small>{{ question.exam_title || 'Ujian' }}</small>
+                      </div>
+                    </div>
+                    <div class="question-tags">
+                      <Tag :value="formatQuestionType(question)" 
+                          :severity="question.question_type === 'singkat' ? 'info' : 'warning'" />
+                    </div>
+                  </div>
                   <div class="answer-form">
                     <label>Jawaban:</label>
-                    <Textarea v-model="answers[question.id]" rows="5" class="w-full" 
-                             placeholder="Ketik jawaban Anda di sini..." />
+                    <Textarea v-model="answers[question.id]" 
+                              :rows="question.question_type === 'singkat' ? 2 : 5" 
+                              class="w-full" 
+                              placeholder="Ketik jawaban Anda di sini..." />
                   </div>
                 </div>
                 
@@ -148,6 +170,11 @@ const fetchSession = async () => {
     
     const response = await sessionApi.getSession(sessionId.value)
     session.value = response.data
+    
+    // Debug info untuk memeriksa data sesi
+    console.log("Session data:", session.value)
+    console.log("Exams in session:", session.value.exams)
+    
     // Set default selected student ke current_student jika ada
     if (session.value?.current_student?.id) {
       selectedStudentId.value = session.value.current_student.id
@@ -173,10 +200,36 @@ const fetchSession = async () => {
 // Mendapatkan daftar pertanyaan untuk ujian
 const fetchQuestions = async () => {
   try {
-    if (!session.value || !session.value.exam_id) return
+    if (!session.value) return
     
-    const response = await examApi.getExamQuestions(session.value.exam_id)
-    questions.value = response.data
+    // Reset questions array
+    questions.value = []
+    
+    // Jika ada daftar ujian (multiple exams)
+    if (session.value.exams && Array.isArray(session.value.exams) && session.value.exams.length > 0) {
+      // Ambil pertanyaan dari semua ujian yang dipilih
+      for (const exam of session.value.exams) {
+        try {
+          const response = await examApi.getExamQuestions(exam.id)
+          // Tambahkan pertanyaan dari ujian ini ke daftar
+          questions.value = [...questions.value, ...response.data]
+        } catch (examErr) {
+          console.error(`Error fetching questions for exam ${exam.id}:`, examErr)
+        }
+      }
+    } 
+    // Fallback ke exam_id tunggal (untuk kompatibilitas)
+    else if (session.value.exam_id) {
+      const response = await examApi.getExamQuestions(session.value.exam_id)
+      questions.value = response.data
+    }
+    
+    console.log(`Loaded ${questions.value.length} questions from all exams`)
+    
+    // Debug: tampilkan semua pertanyaan yang diambil
+    questions.value.forEach((question, index) => {
+      console.log(`Question ${index+1}: ${question.question_text.substring(0, 50)}... (Type: ${question.question_type})`)
+    })
     
     // Inisialisasi objek jawaban
     questions.value.forEach(question => {
@@ -310,6 +363,19 @@ const onStudentSelected = () => {
   }
 }
 
+const formatQuestionType = (question) => {
+  if (!question) return '';
+  
+  const type = question.question_type?.toLowerCase() || '';
+  if (type === 'singkat') {
+    return 'Soal Singkat';
+  } else if (type === 'panjang') {
+    return 'Soal Panjang';
+  } else {
+    return `Soal ${type}`;
+  }
+}
+
 const navigateBack = () => {
   router.push('/exams')
 }
@@ -372,6 +438,16 @@ onMounted(() => {
   font-size: 1.1rem;
 }
 
+.exam-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exam-item {
+  padding: 0.25rem 0;
+}
+
 .exam-container {
   margin-top: 1.5rem;
 }
@@ -395,9 +471,28 @@ onMounted(() => {
   background-color: #f8fafc;
 }
 
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
 .question-text {
   font-weight: 600;
-  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.question-meta {
+  margin-top: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.question-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: 1rem;
 }
 
 .answer-form {

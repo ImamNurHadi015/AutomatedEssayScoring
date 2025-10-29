@@ -11,6 +11,9 @@ import Card from 'primevue/card'
 import ProgressSpinner from 'primevue/progressspinner'
 import { useToast } from 'primevue/usetoast'
 
+// Custom Components
+import LoadingOverlay from '../components/LoadingOverlay.vue'
+
 const props = defineProps({
   id: {
     type: String,
@@ -27,6 +30,8 @@ const answerText = ref('')
 const loading = ref(false)
 const questionLoading = ref(false)
 const error = ref(null)
+const showLoadingOverlay = ref(false)
+const loadingProgress = ref(0)
 const errors = ref({
   studentName: '',
   answerText: ''
@@ -80,6 +85,17 @@ const submitAnswer = async () => {
 
   try {
     loading.value = true
+    showLoadingOverlay.value = true
+    
+    // Simulasi progress untuk UX
+    const progressInterval = setInterval(() => {
+      if (loadingProgress.value < 90) {
+        loadingProgress.value += 5
+      } else {
+        clearInterval(progressInterval)
+      }
+    }, 500)
+    
     const answerData = {
       student_name: studentName.value.trim(),
       answer_text: answerText.value.trim()
@@ -87,16 +103,25 @@ const submitAnswer = async () => {
 
     const response = await answerApi.submitAnswer(props.id, answerData)
     
-    toast.add({
-      severity: 'success',
-      summary: 'Berhasil',
-      detail: 'Jawaban berhasil dikirim dan sedang dievaluasi',
-      life: 3000
-    })
-
-    // Redirect ke halaman detail jawaban
-    router.push(`/answers/${response.data.id}`)
+    // Set progress to 100% when done
+    loadingProgress.value = 100
+    
+    // Delay to show 100% completion
+    setTimeout(() => {
+      showLoadingOverlay.value = false
+      
+      toast.add({
+        severity: 'success',
+        summary: 'Berhasil',
+        detail: 'Jawaban berhasil dikirim dan dinilai',
+        life: 3000
+      })
+      
+      // Redirect ke halaman detail jawaban
+      router.push(`/answers/${response.data.id}`)
+    }, 500)
   } catch (error) {
+    showLoadingOverlay.value = false
     console.error('Error submitting answer:', error)
     toast.add({
       severity: 'error',
@@ -122,6 +147,14 @@ onMounted(() => {
 
 <template>
   <div class="answer-question-page">
+    <LoadingOverlay 
+      :visible="showLoadingOverlay" 
+      title="Sedang Menilai Jawaban"
+      message="Sistem sedang menganalisis dan menilai jawaban Anda menggunakan LLM dan RAG"
+      :progress="loadingProgress"
+      :indeterminate="false"
+    />
+    
     <div class="page-header">
       <Button icon="pi pi-arrow-left" text @click="cancelSubmit" />
       <h1>Jawab Pertanyaan</h1>

@@ -37,12 +37,15 @@
           </div>
           
           <div class="input-group">
-            <label>Jumlah Siswa:</label>
-            <div class="p-inputgroup">
-              <InputNumber v-model="totalStudents" :min="1" :max="50" placeholder="Masukkan jumlah siswa" />
-              <span class="p-inputgroup-addon">siswa</span>
+            <label>Pilih Siswa:</label>
+            <MultiSelect v-model="selectedStudents" :options="students" optionLabel="name" 
+                     placeholder="Pilih siswa untuk ujian ini..." class="w-full" :loading="loadingStudents"
+                     display="chip" :filter="true" />
+            <div class="student-actions">
+              <small>Pilih siswa yang akan mengikuti ujian ini</small>
+              <Button type="button" label="Kelola Siswa" icon="pi pi-user" class="p-button-text p-button-sm" 
+                     @click="navigateToStudents" />
             </div>
-            <small>Maksimal 50 siswa per sesi</small>
           </div>
           
           <div class="form-actions">
@@ -60,7 +63,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { examApi, sessionApi } from '@/services/api'
+import { examApi, sessionApi, studentApi } from '@/services/api'
 
 // PrimeVue Components
 import Button from 'primevue/button'
@@ -75,9 +78,11 @@ const toast = useToast()
 
 const exams = ref([])
 const selectedExams = ref([])
-const totalStudents = ref(1)
+const students = ref([])
+const selectedStudents = ref([])
 const loading = ref(false)
 const loadingExams = ref(false)
+const loadingStudents = ref(false)
 
 // Mendapatkan daftar ujian
 const fetchExams = async () => {
@@ -107,6 +112,39 @@ const fetchExams = async () => {
   }
 }
 
+// Mendapatkan daftar siswa
+const fetchStudents = async () => {
+  try {
+    loadingStudents.value = true
+    const response = await studentApi.getAllStudents()
+    students.value = response.data
+    
+    if (students.value.length === 0) {
+      toast.add({
+        severity: 'warn',
+        summary: 'Tidak ada siswa',
+        detail: 'Tidak ada siswa yang tersedia. Silakan tambahkan siswa terlebih dahulu.',
+        life: 5000
+      })
+    }
+  } catch (err) {
+    console.error('Error fetching students:', err)
+    toast.add({
+      severity: 'error',
+      summary: 'Gagal',
+      detail: 'Gagal mendapatkan daftar siswa',
+      life: 3000
+    })
+  } finally {
+    loadingStudents.value = false
+  }
+}
+
+// Navigasi ke halaman kelola siswa
+const navigateToStudents = () => {
+  router.push('/students')
+}
+
 // Membuat sesi ujian baru
 const createSession = async () => {
   if (!selectedExams.value || selectedExams.value.length === 0) {
@@ -119,11 +157,11 @@ const createSession = async () => {
     return
   }
   
-  if (!totalStudents.value || totalStudents.value < 1) {
+  if (!selectedStudents.value || selectedStudents.value.length === 0) {
     toast.add({
       severity: 'warn',
       summary: 'Peringatan',
-      detail: 'Jumlah siswa minimal 1',
+      detail: 'Silakan pilih minimal satu siswa',
       life: 3000
     })
     return
@@ -134,11 +172,12 @@ const createSession = async () => {
     
     // Siapkan data untuk API
     const examIds = selectedExams.value.map(exam => exam.id)
+    const studentIds = selectedStudents.value.map(student => student.id)
     
     // Tambahkan ke API service
     const response = await sessionApi.createSession({
       exam_ids: examIds,
-      total_students: totalStudents.value
+      student_ids: studentIds
     })
     
     toast.add({
@@ -169,6 +208,7 @@ const navigateBack = () => {
 
 onMounted(() => {
   fetchExams()
+  fetchStudents()
 })
 </script>
 
@@ -212,6 +252,12 @@ onMounted(() => {
 .input-group small {
   color: var(--secondary-color);
   font-size: 0.85rem;
+}
+
+.student-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .form-actions {

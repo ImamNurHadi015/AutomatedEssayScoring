@@ -39,88 +39,135 @@ const navigateTo = (path) => {
 
 <template>
   <div class="home">
-    <h1 class="page-title">Selamat Datang di Sistem Automated Essay Scoring</h1>
-    <p class="page-subtitle">
-      Sistem penilaian otomatis jawaban esai menggunakan LLM dan RAG
-    </p>
-
-    <div class="status-card card">
-      <div class="status-header">
-        <h2>Status Sistem</h2>
-        <div class="status-indicator" :class="{ 'active': systemStatus === 'Aktif' }">
-          <span v-if="loading"><ProgressSpinner style="width: 20px; height: 20px;" /></span>
-          <span v-else>{{ systemStatus }}</span>
-        </div>
+    <div class="welcome-banner">
+      <div class="welcome-content">
+        <h1 class="page-title">Selamat Datang di Sistem Automated Essay Scoring</h1>
+        <p class="page-subtitle">
+          Sistem penilaian otomatis jawaban esai menggunakan LLM dan RAG
+        </p>
+      </div>
+      <div class="status-badge" :class="{ 'active': systemStatus === 'Aktif' }">
+        <span v-if="loading"><ProgressSpinner style="width: 20px; height: 20px;" /></span>
+        <span v-else>{{ systemStatus === 'Aktif' ? 'Sistem Aktif' : 'Sistem Tidak Aktif' }}</span>
       </div>
     </div>
 
-    <div class="features-grid">
-      <div class="card feature-card plain-card">
-        <h2 class="feature-title">
-          <span class="feature-icon-wrapper">
-            <i class="pi pi-plus feature-icon" aria-hidden="true"></i>
-          </span>
-          Buat Agenda Ujian
-        </h2>
-        <div class="feature-content">
-          <p>Buat agenda ujian baru dengan berbagai pertanyaan esai untuk siswa.</p>
-        </div>
-        <div class="feature-footer">
-          <Button class="w-full" label="Buat Ujian" icon="pi pi-plus" @click="navigateTo('/exams/create')" />
-        </div>
-      </div>
-
-      <div class="card feature-card plain-card">
-        <h2 class="feature-title">
-          <span class="feature-icon-wrapper">
-            <i class="pi pi-list feature-icon" aria-hidden="true"></i>
-          </span>
-          Lihat Ujian
-        </h2>
-        <div class="feature-content">
-          <p>Lihat daftar ujian yang telah dibuat dan kelola pertanyaan.</p>
-        </div>
-        <div class="feature-footer">
-          <Button class="w-full" label="Lihat Ujian" icon="pi pi-list" @click="navigateTo('/exams')" />
-        </div>
-      </div>
-
-      <div class="card feature-card plain-card">
-        <h2 class="feature-title">
-          <span class="feature-icon-wrapper">
-            <i class="pi pi-chart-bar feature-icon" aria-hidden="true"></i>
-          </span>
-          Bandingkan RAG
-        </h2>
-        <div class="feature-content">
-          <p>Bandingkan hasil retrieval dari BM25 dan DPR untuk analisis.</p>
-        </div>
-        <div class="feature-footer">
-          <Button class="w-full" label="Bandingkan RAG" icon="pi pi-chart-bar" @click="navigateTo('/compare-rag')" />
-        </div>
-      </div>
+    <div class="section-title">
+      <h2>Aplikasi dan Layanan</h2>
     </div>
-
-    <div class="info-section card">
-      <h2>Tentang Sistem AES</h2>
-      <p>
-        Sistem Automated Essay Scoring (AES) ini menggunakan model bahasa besar (LLM) Llama-3.2 dan teknik Retrieval-Augmented Generation (RAG) 
-        untuk menilai jawaban esai siswa secara otomatis. Sistem ini menggunakan dua metode retrieval: BM25 dan Dense Passage Retrieval (DPR) 
-        untuk mengambil konten yang relevan dari buku referensi.
-      </p>
-      <p>
-        Sistem ini dapat membantu guru dalam menilai jawaban esai siswa dengan lebih efisien dan konsisten, 
-        sambil memberikan umpan balik yang konstruktif kepada siswa.
-      </p>
+    
+    <div class="app-grid">
+      <div class="feature-card" @click="navigateTo('/exams')">
+        <span class="feature-icon-wrapper">
+          <i class="pi pi-list feature-icon"></i>
+        </span>
+        <div class="feature-content">
+          <h3 class="feature-title">Kelola Ujian</h3>
+          <p class="feature-description">Daftar ujian yang telah dibuat</p>
+        </div>
+      </div>
       
-      <div class="navigation-buttons">
-        <h3>Navigasi Langsung</h3>
-        <div class="button-group">
-          <Button label="Daftar Ujian" icon="pi pi-list" @click="navigateTo('/exams')" class="p-button-primary" />
-          <Button label="Buat Ujian Baru" icon="pi pi-plus" @click="navigateTo('/exams/create')" class="p-button-success" />
-          <Button label="Buat Sesi Ujian" icon="pi pi-users" @click="navigateTo('/sessions/create')" class="p-button-warning" />
-          <Button label="Bandingkan RAG" icon="pi pi-chart-bar" @click="navigateTo('/compare-rag')" class="p-button-info" />
+      <div class="feature-card" @click="navigateTo('/exams/create')">
+        <span class="feature-icon-wrapper">
+          <i class="pi pi-plus feature-icon"></i>
+        </span>
+        <div class="feature-content">
+          <h3 class="feature-title">Buat Ujian</h3>
+          <p class="feature-description">Buat ujian dengan soal esai</p>
         </div>
+      </div>
+      
+      <div class="feature-card" @click="navigateTo('/sessions/create')">
+        <span class="feature-icon-wrapper">
+          <i class="pi pi-users feature-icon"></i>
+        </span>
+        <div class="feature-content">
+          <h3 class="feature-title">Sesi Ujian</h3>
+          <p class="feature-description">Buat dan kelola sesi ujian</p>
+        </div>
+      </div>
+      
+      <div class="feature-card" @click="navigateTo('/students')">
+        <span class="feature-icon-wrapper">
+          <i class="pi pi-user feature-icon"></i>
+        </span>
+        <div class="feature-content">
+          <h3 class="feature-title">Data Siswa</h3>
+          <p class="feature-description">Kelola data siswa</p>
+        </div>
+      </div>
+      
+      <div class="feature-card" @click="navigateTo('/compare-rag')">
+        <span class="feature-icon-wrapper">
+          <i class="pi pi-chart-bar feature-icon"></i>
+        </span>
+        <div class="feature-content">
+          <h3 class="feature-title">Analisis RAG</h3>
+          <p class="feature-description">Bandingkan metode retrieval</p>
+        </div>
+      </div>
+      
+      <div class="feature-card" @click="navigateTo('/sessions/history')">
+        <span class="feature-icon-wrapper">
+          <i class="pi pi-history feature-icon"></i>
+        </span>
+        <div class="feature-content">
+          <h3 class="feature-title">History Sesi</h3>
+          <p class="feature-description">Lihat history sesi ujian</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <h2>Pengumuman</h2>
+    </div>
+    
+    <div class="card announcement-card">
+      <div class="announcement-header">
+        <h3>Selamat Datang di AES System</h3>
+        <span class="announcement-date">29 Oktober 2025</span>
+      </div>
+      <div class="announcement-content">
+        <p>
+          Sistem Automated Essay Scoring (AES) ini menggunakan model bahasa besar (LLM) Llama-3.2 dan teknik 
+          Retrieval-Augmented Generation (RAG) untuk menilai jawaban esai siswa secara otomatis.
+        </p>
+        <p>
+          Sistem ini dapat membantu guru dalam menilai jawaban esai siswa dengan lebih efisien dan konsisten, 
+          sambil memberikan umpan balik yang konstruktif kepada siswa.
+        </p>
+      </div>
+    </div>
+    
+    <div class="card announcement-card">
+      <div class="announcement-header">
+        <h3>Fitur Terbaru: Manajemen Siswa</h3>
+        <span class="announcement-date">28 Oktober 2025</span>
+      </div>
+      <div class="announcement-content">
+        <p>
+          Fitur manajemen siswa telah ditambahkan ke sistem. Sekarang Anda dapat mengelola data siswa, 
+          melihat history ujian mereka, dan memilih siswa spesifik untuk sesi ujian.
+        </p>
+      </div>
+    </div>
+    
+    <div class="section-title">
+      <h2>Tentang Sistem</h2>
+    </div>
+    
+    <div class="card info-card">
+      <h3>Automated Essay Scoring dengan LLM dan RAG</h3>
+      <div class="info-content">
+        <p>
+          Sistem ini menggunakan dua metode retrieval: BM25 (Sparse Retrieval) dan Dense Passage Retrieval (DPR) 
+          untuk mengambil konten yang relevan dari buku referensi. Selain itu, sistem juga menggunakan metode Hybrid
+          yang menggabungkan kelebihan dari kedua metode tersebut.
+        </p>
+        <p>
+          Model bahasa yang digunakan adalah Llama-3.2, yang telah dioptimasi untuk memberikan penilaian
+          yang akurat dan konsisten terhadap jawaban esai siswa.
+        </p>
       </div>
     </div>
   </div>
@@ -132,145 +179,190 @@ const navigateTo = (path) => {
   margin: 0 auto;
 }
 
-.page-title {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-  font-size: 1.2rem;
-  color: var(--secondary-color);
+/* Welcome banner */
+.welcome-banner {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
   margin-bottom: 2rem;
-}
-
-.status-card {
-  margin-bottom: 2rem;
-}
-
-.status-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
 }
 
-.status-indicator {
+.welcome-content {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  color: var(--myits-blue);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.status-badge {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   background-color: #FEE2E2;
   color: #EF4444;
   font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.status-indicator.active {
+.status-badge.active {
   background-color: #DCFCE7;
   color: #10B981;
 }
 
-.features-grid {
+/* Section title */
+.section-title {
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title h2 {
+  font-size: 1.25rem;
+  color: var(--myits-blue);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* App grid */
+.app-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .feature-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Ratakan struktur internal Card PrimeVue */
-/* Kartu plain mengikuti gaya section "Tentang Sistem AES" */
-.plain-card {
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-  padding: 1rem;
-}
-.plain-card:hover {
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  transform: translateY(-1px);
-  transition: all .2s ease;
-}
-
-.feature-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
+  padding: 1.25rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-color: rgba(59, 130, 246, 0.1);
-  margin-right: 8px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  margin-right: 1rem !important;
+  color: var(--myits-blue) !important;
 }
 
 .feature-icon {
-  color: var(--primary-color);
-  font-size: 1rem;
+  font-size: 1.5rem !important;
+  color: var(--myits-blue) !important;
 }
 
 .feature-content {
-  min-height: 64px;
-}
-
-/* Tombol full width dan konsisten */
-.w-full {
-  width: 100%;
+  flex: 1;
 }
 
 .feature-title {
-  margin: 0 0 .75rem 0;
-  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: var(--myits-blue);
+}
+
+.feature-description {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+/* Announcement card */
+.announcement-card {
+  margin-bottom: 1rem;
+}
+
+.announcement-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: .5rem;
-  font-size: 1.1rem;
-}
-
-.feature-footer { margin-top: auto; }
-
-.info-section {
-  margin-top: 2rem;
-}
-
-.info-section h2 {
   margin-bottom: 1rem;
-  color: var(--primary-color);
 }
 
-.info-section p {
-  margin-bottom: 1rem;
+.announcement-header h3 {
+  font-size: 1.125rem;
+  color: var(--myits-blue);
+  margin: 0;
+  font-weight: 600;
+}
+
+.announcement-date {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+}
+
+.announcement-content p {
+  font-size: 0.9375rem;
   line-height: 1.6;
-}
-
-.navigation-buttons {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.navigation-buttons h3 {
   margin-bottom: 1rem;
-  color: var(--primary-color);
 }
 
-.button-group {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+.announcement-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Info card */
+.info-card h3 {
+  font-size: 1.125rem;
+  color: var(--myits-blue);
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.info-content p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.info-content p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-  .features-grid {
+  .welcome-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .status-badge {
+    margin-top: 1rem;
+  }
+  
+  .app-grid {
     grid-template-columns: 1fr;
   }
 }

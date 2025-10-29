@@ -125,7 +125,9 @@ watch(
           </Column>
           <Column style="width: 10%">
             <template #body="slotProps">
-              <Button icon="pi pi-eye" rounded text aria-label="Lihat" @click="viewExam(slotProps.data)" />
+              <div class="action-button-wrapper">
+                <Button icon="pi pi-eye" rounded text aria-label="Lihat" @click="viewExam(slotProps.data)" />
+              </div>
             </template>
           </Column>
         </DataTable>
@@ -161,5 +163,13 @@ watch(
 .error-message {
   color: #EF4444;
   margin-bottom: 1rem;
+}
+
+.action-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 </style>

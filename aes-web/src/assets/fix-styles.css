@@ -1,5 +1,21 @@
 /* Fix styles untuk mengatasi masalah tampilan */
 
+/* Memperbaiki tampilan ikon PrimeVue secara global */
+.pi {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-family: 'primeicons' !important;
+  speak: none !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
 /* Memastikan body memiliki background putih */
 body {
   background-color: #F8FAFC !important;
@@ -97,16 +113,77 @@ button, .p-button {
   border-radius: 4px !important;
 }
 
+/* Memperbaiki tampilan ikon dalam tombol */
+.p-button-icon {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Memperbaiki tampilan tombol dengan ikon */
+.p-button.p-button-icon-only {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  padding: 0.5rem !important;
+}
+
+/* Memastikan wrapper tombol aksi selalu terlihat */
+.action-button-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 40px !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  padding: 0.25rem !important;
+}
+
 /* Memperbaiki tampilan link */
 a {
   color: #3B82F6 !important;
   text-decoration: none !important;
 }
 
+/* Memperbaiki tampilan ikon di beranda */
+.feature-icon-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  margin-right: 8px !important;
+}
+
+.feature-icon {
+  font-size: 1rem !important;
+  color: #3B82F6 !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 /* Memperbaiki tampilan tabel */
 table {
   width: 100% !important;
   border-collapse: collapse !important;
+}
+
+/* Memperbaiki tampilan ikon dalam tabel */
+.p-datatable .p-button.p-button-icon-only {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  padding: 0.5rem !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.p-datatable .p-button.p-button-icon-only:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+.p-datatable .p-button.p-button-icon-only .p-button-icon {
+  font-size: 1rem !important;
+  margin: 0 !important;
 }
 
 /* Memastikan tampilan responsif */

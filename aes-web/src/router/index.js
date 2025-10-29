@@ -73,9 +73,45 @@ const router = createRouter({
       props: true,
     },
     {
+      path: '/sessions/history',
+      name: 'session-history',
+      component: () => import('../views/SessionHistoryView.vue'),
+    },
+    {
+      path: '/sessions/:id/student-results',
+      name: 'student-results',
+      component: () => import('../views/StudentResultsView.vue'),
+      props: true,
+    },
+    {
+      path: '/students',
+      name: 'students',
+      component: () => import('../views/StudentsView.vue'),
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue'),
+    },
+    {
+      path: '/account',
+      name: 'account',
+      component: () => import('../views/AccountView.vue'),
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: () => import('../views/SettingsView.vue'),
+    },
+    {
+      path: '/notifications',
+      name: 'notifications',
+      component: () => import('../views/NotificationsView.vue'),
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: () => import('../views/NewsView.vue'),
     },
     {
       path: '/:pathMatch(.*)*',

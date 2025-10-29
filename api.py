@@ -502,6 +502,171 @@ def initialize_aes():
         return False
 
 # API Routes
+@app.route('/api/students', methods=['GET'])
+def get_students():
+    """Mendapatkan daftar semua siswa"""
+    try:
+        students_cursor = students_collection.find().sort("name", 1)  # Urutkan berdasarkan nama
+        students = []
+        
+        for student in students_cursor:
+            students.append({
+                "id": str(student["_id"]),
+                "name": student.get("name", ""),
+                "nis": student.get("nis", ""),
+                "created_at": student.get("created_at", get_timestamp())
+            })
+            
+        return jsonify(students)
+    except Exception as e:
+        logger.error(f"Error saat mendapatkan daftar siswa: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/students', methods=['POST'])
+def create_student():
+    """Membuat siswa baru"""
+    try:
+        data = request.json
+        name = data.get('name')
+        nis = data.get('nis')
+        
+        if not name:
+            return jsonify({"error": "Parameter 'name' diperlukan"}), 400
+        if not nis:
+            return jsonify({"error": "Parameter 'nis' diperlukan"}), 400
+            
+        # Cek apakah NIS sudah digunakan
+        existing = students_collection.find_one({"nis": nis})
+        if existing:
+            return jsonify({"error": f"NIS '{nis}' sudah digunakan oleh siswa lain"}), 400
+            
+        # Buat siswa baru
+        new_student = {
+            "name": name,
+            "nis": nis,
+            "created_at": get_timestamp()
+        }
+        
+        result = students_collection.insert_one(new_student)
+        new_student_id = result.inserted_id
+        
+        return jsonify({
+            "id": str(new_student_id),
+            "name": name,
+            "nis": nis,
+            "created_at": new_student["created_at"]
+        }), 201
+    except Exception as e:
+        logger.error(f"Error saat membuat siswa: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/students/<student_id>', methods=['GET'])
+def get_student(student_id):
+    """Mendapatkan detail siswa"""
+    try:
+        # Coba konversi ke ObjectId jika valid
+        try:
+            student_obj_id = ObjectId(student_id)
+            student = students_collection.find_one({"_id": student_obj_id})
+        except:
+            # Jika bukan ObjectId yang valid, cari berdasarkan string ID
+            student = students_collection.find_one({"_id": student_id})
+            
+        if not student:
+            return jsonify({"error": f"Siswa dengan ID {student_id} tidak ditemukan"}), 404
+            
+        return jsonify({
+            "id": str(student["_id"]),
+            "name": student.get("name", ""),
+            "nis": student.get("nis", ""),
+            "created_at": student.get("created_at", get_timestamp())
+        })
+    except Exception as e:
+        logger.error(f"Error saat mendapatkan detail siswa: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/students/<student_id>', methods=['PUT', 'PATCH'])
+def update_student(student_id):
+    """Memperbarui data siswa"""
+    try:
+        data = request.json
+        
+        # Validasi data
+        if not data:
+            return jsonify({"error": "Tidak ada data yang diberikan"}), 400
+            
+        # Coba konversi ke ObjectId jika valid
+        try:
+            student_obj_id = ObjectId(student_id)
+            student = students_collection.find_one({"_id": student_obj_id})
+        except:
+            # Jika bukan ObjectId yang valid, cari berdasarkan string ID
+            student = students_collection.find_one({"_id": student_id})
+            
+        if not student:
+            return jsonify({"error": f"Siswa dengan ID {student_id} tidak ditemukan"}), 404
+            
+        # Perbarui data
+        update_data = {}
+        
+        if 'name' in data:
+            update_data["name"] = data["name"]
+            
+        if 'nis' in data:
+            # Cek apakah NIS sudah digunakan oleh siswa lain
+            if data["nis"] != student.get("nis"):
+                existing = students_collection.find_one({"nis": data["nis"], "_id": {"$ne": student["_id"]}})
+                if existing:
+                    return jsonify({"error": f"NIS '{data['nis']}' sudah digunakan oleh siswa lain"}), 400
+            update_data["nis"] = data["nis"]
+            
+        if not update_data:
+            return jsonify({"error": "Tidak ada data yang diperbarui"}), 400
+            
+        # Update di database
+        students_collection.update_one({"_id": student["_id"]}, {"$set": update_data})
+        
+        # Ambil data terbaru
+        updated_student = students_collection.find_one({"_id": student["_id"]})
+        
+        return jsonify({
+            "id": str(updated_student["_id"]),
+            "name": updated_student.get("name", ""),
+            "nis": updated_student.get("nis", ""),
+            "created_at": updated_student.get("created_at", get_timestamp())
+        })
+    except Exception as e:
+        logger.error(f"Error saat memperbarui siswa: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/students/<student_id>', methods=['DELETE'])
+def delete_student(student_id):
+    """Menghapus siswa"""
+    try:
+        # Coba konversi ke ObjectId jika valid
+        try:
+            student_obj_id = ObjectId(student_id)
+            student = students_collection.find_one({"_id": student_obj_id})
+        except:
+            # Jika bukan ObjectId yang valid, cari berdasarkan string ID
+            student = students_collection.find_one({"_id": student_id})
+            
+        if not student:
+            return jsonify({"error": f"Siswa dengan ID {student_id} tidak ditemukan"}), 404
+            
+        # Cek apakah siswa memiliki jawaban
+        answer_count = answers_collection.count_documents({"student_id": str(student["_id"])})
+        if answer_count > 0:
+            return jsonify({"error": f"Tidak dapat menghapus siswa karena memiliki {answer_count} jawaban terkait"}), 400
+            
+        # Hapus siswa
+        students_collection.delete_one({"_id": student["_id"]})
+        
+        return jsonify({"message": "Siswa berhasil dihapus"})
+    except Exception as e:
+        logger.error(f"Error saat menghapus siswa: {e}")
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Endpoint untuk cek kesehatan API"""
@@ -513,13 +678,20 @@ def create_session():
     try:
         data = request.json
         exam_id = data.get('exam_id')
+        exam_ids = data.get('exam_ids', [])
         student_ids = data.get('student_ids', [])
         total_students = data.get('total_students', 0)
         
-        if not exam_id:
-            return jsonify({"error": "Parameter 'exam_id' diperlukan"}), 400
+        # Mendukung baik exam_id tunggal maupun array exam_ids
+        if not exam_id and not exam_ids:
+            return jsonify({"error": "Parameter 'exam_id' atau 'exam_ids' diperlukan"}), 400
+            
+        # Jika exam_ids disediakan, gunakan yang pertama sebagai exam_id utama
+        if exam_ids and isinstance(exam_ids, list) and len(exam_ids) > 0:
+            exam_id = exam_ids[0]
         
-        # Jika student_ids tidak disediakan, ambil dari database berdasarkan total_students
+        # Jika student_ids disediakan, gunakan itu
+        # Jika tidak, ambil dari database berdasarkan total_students
         if not student_ids or not isinstance(student_ids, list) or len(student_ids) == 0:
             if total_students and total_students > 0:
                 # Ambil siswa dari database
@@ -529,15 +701,39 @@ def create_session():
             else:
                 return jsonify({"error": "Parameter 'student_ids' atau 'total_students' diperlukan"}), 400
             
-        # Validasi exam_id
+        # Validasi exam_id dan exam_ids
+        primary_exam = None
+        exams_list = []
+        
+        # Validasi exam_id utama
         try:
             exam_obj_id = ObjectId(exam_id)
-            exam = exams_collection.find_one({"_id": exam_obj_id})
+            primary_exam = exams_collection.find_one({"_id": exam_obj_id})
         except:
-            exam = exams_collection.find_one({"_id": exam_id})
+            primary_exam = exams_collection.find_one({"_id": exam_id})
             
-        if not exam:
-            return jsonify({"error": f"Ujian dengan ID {exam_id} tidak ditemukan"}), 404
+        if not primary_exam:
+            return jsonify({"error": f"Ujian utama dengan ID {exam_id} tidak ditemukan"}), 404
+            
+        exams_list.append({
+            "id": str(primary_exam["_id"]),
+            "title": primary_exam["title"]
+        })
+        
+        # Validasi exam_ids tambahan jika ada
+        if exam_ids and isinstance(exam_ids, list) and len(exam_ids) > 1:
+            for additional_exam_id in exam_ids[1:]:  # Skip yang pertama karena sudah divalidasi
+                try:
+                    add_exam_obj_id = ObjectId(additional_exam_id)
+                    additional_exam = exams_collection.find_one({"_id": add_exam_obj_id})
+                except:
+                    additional_exam = exams_collection.find_one({"_id": additional_exam_id})
+                
+                if additional_exam:
+                    exams_list.append({
+                        "id": str(additional_exam["_id"]),
+                        "title": additional_exam["title"]
+                    })
             
         # Validasi student_ids
         valid_students = []
@@ -566,11 +762,13 @@ def create_session():
         # Buat session baru
         new_session = {
             "session_code": session_code,
-            "exam_id": str(exam["_id"]),
+            "exam_id": str(primary_exam["_id"]),  # Untuk kompatibilitas dengan kode lama
+            "exams": exams_list,                 # Daftar semua ujian yang dipilih
             "students": valid_students,
             "total_students": len(valid_students),
             "current_student_index": 0,
             "current_student": valid_students[0] if valid_students else None,
+            "current_exam_index": 0,             # Indeks ujian saat ini
             "is_completed": False,
             "created_at": get_timestamp()
         }
@@ -583,11 +781,13 @@ def create_session():
             "id": str(new_session_id),
             "session_code": new_session["session_code"],
             "exam_id": new_session["exam_id"],
-            "exam_title": exam["title"],
+            "exam_title": primary_exam["title"],
+            "exams": new_session["exams"],
             "students": new_session["students"],
             "total_students": new_session["total_students"],
             "current_student": new_session["current_student"],
             "current_student_index": new_session["current_student_index"],
+            "current_exam_index": new_session["current_exam_index"],
             "is_completed": new_session["is_completed"],
             "created_at": new_session["created_at"]
         })
@@ -631,21 +831,61 @@ def get_session(session_id):
         except Exception as e:
             logger.error(f"Error saat mengambil pertanyaan: {e}")
             
+        # Tambahkan daftar exams jika ada
+        exams_list = session.get("exams", [])
+        
         return jsonify({
             "id": str(session["_id"]),
             "session_code": session.get("session_code", ""),
             "exam_id": session["exam_id"],
             "exam_title": exam_title,
+            "exams": exams_list,  # Tambahkan daftar ujian
             "students": session.get("students", []),
             "total_students": session.get("total_students", 0),
             "current_student": session.get("current_student", {}),
             "current_student_index": session.get("current_student_index", 0),
+            "current_exam_index": session.get("current_exam_index", 0),  # Tambahkan indeks ujian saat ini
             "is_completed": session.get("is_completed", False),
             "created_at": session.get("created_at", get_timestamp()),
             "questions": questions
         })
     except Exception as e:
         logger.error(f"Error saat mendapatkan sesi: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/sessions', methods=['GET'])
+def get_sessions():
+    """Mendapatkan daftar semua sesi ujian"""
+    try:
+        sessions_cursor = sessions_collection.find().sort("created_at", -1)  # Urutkan dari yang terbaru
+        sessions = []
+        
+        for session in sessions_cursor:
+            # Ambil ujian
+            exam_title = "Unknown Exam"
+            try:
+                exam_obj_id = ObjectId(session["exam_id"])
+                exam = exams_collection.find_one({"_id": exam_obj_id})
+                if exam:
+                    exam_title = exam["title"]
+            except:
+                pass
+            
+            # Tambahkan ke hasil
+            sessions.append({
+                "id": str(session["_id"]),
+                "session_code": session.get("session_code", ""),
+                "exam_id": session["exam_id"],
+                "exam_title": exam_title,
+                "exams": session.get("exams", []),
+                "total_students": session.get("total_students", 0),
+                "is_completed": session.get("is_completed", False),
+                "created_at": session.get("created_at", get_timestamp())
+            })
+            
+        return jsonify(sessions)
+    except Exception as e:
+        logger.error(f"Error saat mendapatkan daftar sesi: {e}")
         return jsonify({"error": str(e)}), 500
 
 @app.route('/api/sessions/<session_id>/next-student', methods=['POST'])
@@ -1236,7 +1476,9 @@ def get_exam_questions(exam_id):
                 "created_at": question.get("created_at", get_timestamp()),
                 "question_type": question_type,
                 "max_score": question.get("max_score", scoring_defaults["max_score"]),
-                "allowed_scores": question.get("allowed_scores", scoring_defaults["allowed_scores"])
+                "allowed_scores": question.get("allowed_scores", scoring_defaults["allowed_scores"]),
+                "exam_id": str(exam["_id"]),
+                "exam_title": exam["title"]
             })
                 
         logger.info(f"Ditemukan {len(questions)} pertanyaan untuk ujian {exam_id}")
@@ -1742,27 +1984,28 @@ def init_aes():
         logger.error(f"Error saat menginisialisasi AES dari API endpoint: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
 
-# Endpoint untuk mendapatkan daftar siswa
-@app.route('/api/students', methods=['GET'])
-def get_students():
-    """Mendapatkan daftar semua siswa"""
-    try:
-        students = list(students_collection.find())
-        result = []
-        
-        for student in students:
-            result.append({
-                "id": str(student["_id"]),
-                "name": student["name"],
-                "nis": student["nis"],
-                "kelas": student["kelas"],
-                "created_at": student.get("created_at", get_timestamp())
-            })
-            
-        return jsonify(result)
-    except Exception as e:
-        logger.error(f"Error saat mengambil daftar siswa: {e}")
-        return jsonify({"error": str(e)}), 500
+# Endpoint untuk mendapatkan daftar siswa sudah didefinisikan di atas
+# Kode di bawah ini dinonaktifkan untuk menghindari duplikasi
+# @app.route('/api/students', methods=['GET'])
+# def get_students_legacy():
+#     """Mendapatkan daftar semua siswa (versi lama)"""
+#     try:
+#         students = list(students_collection.find())
+#         result = []
+#         
+#         for student in students:
+#             result.append({
+#                 "id": str(student["_id"]),
+#                 "name": student["name"],
+#                 "nis": student["nis"],
+#                 "kelas": student["kelas"],
+#                 "created_at": student.get("created_at", get_timestamp())
+#             })
+#             
+#         return jsonify(result)
+#     except Exception as e:
+#         logger.error(f"Error saat mengambil daftar siswa: {e}")
+#         return jsonify({"error": str(e)}), 500
 
 # Fungsi yang dijalankan saat request pertama
 @app.before_request
