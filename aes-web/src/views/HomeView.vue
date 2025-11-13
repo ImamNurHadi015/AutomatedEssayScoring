@@ -41,13 +41,13 @@ const navigateTo = (path) => {
   <div class="home">
     <div class="welcome-banner">
       <div class="welcome-content">
-        <h1 class="page-title">Selamat Datang di Sistem Automated Essay Scoring</h1>
-        <p class="page-subtitle">
-          Sistem penilaian otomatis jawaban esai menggunakan LLM dan RAG
-        </p>
+    <h1 class="page-title">Selamat Datang di Sistem Automated Essay Scoring</h1>
+    <p class="page-subtitle">
+      Sistem penilaian otomatis jawaban esai menggunakan LLM dan RAG
+    </p>
       </div>
       <div class="status-badge" :class="{ 'active': systemStatus === 'Aktif' }">
-        <span v-if="loading"><ProgressSpinner style="width: 20px; height: 20px;" /></span>
+          <span v-if="loading"><ProgressSpinner style="width: 20px; height: 20px;" /></span>
         <span v-else>{{ systemStatus === 'Aktif' ? 'Sistem Aktif' : 'Sistem Tidak Aktif' }}</span>
       </div>
     </div>
@@ -76,7 +76,7 @@ const navigateTo = (path) => {
           <p class="feature-description">Buat ujian dengan soal esai</p>
         </div>
       </div>
-      
+
       <div class="feature-card" @click="navigateTo('/sessions/create')">
         <span class="feature-icon-wrapper">
           <i class="pi pi-users feature-icon"></i>
@@ -96,7 +96,7 @@ const navigateTo = (path) => {
           <p class="feature-description">Kelola data siswa</p>
         </div>
       </div>
-      
+
       <div class="feature-card" @click="navigateTo('/compare-rag')">
         <span class="feature-icon-wrapper">
           <i class="pi pi-chart-bar feature-icon"></i>
@@ -128,17 +128,17 @@ const navigateTo = (path) => {
         <span class="announcement-date">29 Oktober 2025</span>
       </div>
       <div class="announcement-content">
-        <p>
+      <p>
           Sistem Automated Essay Scoring (AES) ini menggunakan model bahasa besar (LLM) Llama-3.2 dan teknik 
           Retrieval-Augmented Generation (RAG) untuk menilai jawaban esai siswa secara otomatis.
-        </p>
-        <p>
-          Sistem ini dapat membantu guru dalam menilai jawaban esai siswa dengan lebih efisien dan konsisten, 
-          sambil memberikan umpan balik yang konstruktif kepada siswa.
-        </p>
+      </p>
+      <p>
+        Sistem ini dapat membantu guru dalam menilai jawaban esai siswa dengan lebih efisien dan konsisten, 
+        sambil memberikan umpan balik yang konstruktif kepada siswa.
+      </p>
       </div>
     </div>
-    
+      
     <div class="card announcement-card">
       <div class="announcement-header">
         <h3>Fitur Terbaru: Manajemen Siswa</h3>
@@ -154,7 +154,7 @@ const navigateTo = (path) => {
     
     <div class="section-title">
       <h2>Tentang Sistem</h2>
-    </div>
+        </div>
     
     <div class="card info-card">
       <h3>Automated Essay Scoring dengan LLM dan RAG</h3>

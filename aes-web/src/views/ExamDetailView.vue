@@ -277,7 +277,7 @@ watch(
                 <Column style="width: 10%">
                   <template #body="slotProps">
                     <div class="action-button-wrapper">
-                      <Button icon="pi pi-eye" rounded text aria-label="Lihat" @click="viewQuestion(slotProps.data)" />
+                    <Button icon="pi pi-eye" rounded text aria-label="Lihat" @click="viewQuestion(slotProps.data)" />
                     </div>
                   </template>
                 </Column>
