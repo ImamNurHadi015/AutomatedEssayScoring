@@ -14,13 +14,12 @@ import time
 import subprocess
 import tempfile
 import re
+import pickle
 from pathlib import Path
 import numpy as np
 from typing import List, Dict, Any, Tuple, Optional
 import logging
 import concurrent.futures
-
-from dense_retriever import DenseRetriever
 
 # Konfigurasi logging
 logging.basicConfig(
@@ -305,19 +304,337 @@ class BM25Retriever:
                 
         return filtered
 
-class HybridRetriever:
-    """Kombinasi sparse (BM25) dan dense retriever dengan penggabungan skor ter-normalisasi."""
+class DenseRetriever:
+    """Implementasi Dense Passage Retrieval untuk retrieval dokumen"""
+    
+    def __init__(self, chunks: List[str] = None, model_name: str = "intfloat/multilingual-e5-base", cache_dir: str = None):
+        """
+        Inisialisasi Dense Retriever
+        
+        Args:
+            chunks: List chunk teks yang akan diindeks
+            model_name: Nama model sentence-transformer yang akan digunakan
+            cache_dir: Direktori untuk menyimpan cache embeddings
+        """
+        self.chunks = chunks or []
+        self.model_name = model_name
+        self.cache_dir = cache_dir
+        self.model = None
+        self.embeddings = None
+        self.index = None
+        self._use_e5_format = "e5" in self.model_name.lower()
+        
+        # Coba inisialisasi model dan index
+        if chunks:
+            self._initialize_model()
+            self._create_embeddings()
+            self._create_index()
+    
+    def _initialize_model(self):
+        """Inisialisasi model sentence-transformer"""
+        try:
+            from sentence_transformers import SentenceTransformer
+            
+            logger.info(f"Memuat model {self.model_name}...")
+            start_time = time.time()
+            self.model = SentenceTransformer(self.model_name)
+            elapsed = time.time() - start_time
+            logger.info(f"Model berhasil dimuat dalam {elapsed:.2f} detik")
+        except ImportError:
+            logger.error("sentence-transformers tidak ditemukan. Menginstal dengan 'pip install sentence-transformers'")
+            sys.exit(1)
+        except Exception as e:
+            logger.error(f"Gagal menginisialisasi model: {e}")
+            sys.exit(1)
+    
+    def _create_embeddings(self):
+        """Membuat embeddings untuk semua chunks"""
+        if not self.model:
+            self._initialize_model()
+        
+        # Cek apakah ada cache embeddings
+        cache_path = os.path.join(self.cache_dir, "dpr_embeddings.pkl") if self.cache_dir else None
+        if cache_path and os.path.exists(cache_path):
+            try:
+                with open(cache_path, "rb") as f:
+                    cache_data = pickle.load(f)
+                
+                # Periksa apakah cache memiliki format yang valid
+                required_keys = ["chunks", "embeddings"]
+                for key in required_keys:
+                    if key not in cache_data:
+                        raise KeyError(f"Kunci '{key}' tidak ditemukan dalam cache")
+                
+                # Gunakan model_name default jika tidak ada dalam cache
+                cached_model_name = cache_data.get("model_name", "sentence-transformers/all-MiniLM-L6-v2")
+                
+                # Periksa apakah cache cocok dengan model dan chunks saat ini
+                if cached_model_name == self.model_name and len(cache_data["chunks"]) == len(self.chunks):
+                    self.embeddings = cache_data["embeddings"]
+                    logger.info(f"Berhasil memuat embeddings dari cache ({len(self.embeddings)} chunks)")
+                    return
+                else:
+                    logger.info("Cache tidak cocok dengan model atau chunks saat ini, membuat embeddings baru")
+            except KeyError as e:
+                logger.warning(f"Format cache tidak valid: {e}")
+                # Hapus cache yang rusak
+                try:
+                    os.remove(cache_path)
+                    logger.info(f"Cache yang rusak telah dihapus: {cache_path}")
+                except:
+                    pass
+            except Exception as e:
+                logger.warning(f"Gagal memuat cache embeddings: {e}")
+        
+        # Buat embeddings baru
+        logger.info(f"Membuat embeddings untuk {len(self.chunks)} chunks...")
+        start_time = time.time()
+        
+        try:
+            from tqdm import tqdm
+            
+            # Buat embeddings dengan batching untuk efisiensi memori
+            batch_size = 32
+            embeddings = []
+            
+            for i in tqdm(range(0, len(self.chunks), batch_size)):
+                batch = self.chunks[i:i+batch_size]
+                inputs = [self._format_passage(text) for text in batch] if self._use_e5_format else batch
+                encode_kwargs = {"show_progress_bar": False}
+                if self._use_e5_format:
+                    encode_kwargs["normalize_embeddings"] = True
+                batch_embeddings = self.model.encode(inputs, **encode_kwargs)
+                embeddings.extend(batch_embeddings)
+            
+            self.embeddings = np.array(embeddings)
+            elapsed = time.time() - start_time
+            logger.info(f"Embeddings berhasil dibuat dalam {elapsed:.2f} detik")
+            
+            # Simpan cache jika direktori cache tersedia
+            if self.cache_dir:
+                os.makedirs(self.cache_dir, exist_ok=True)
+                with open(os.path.join(self.cache_dir, "dpr_embeddings.pkl"), "wb") as f:
+                    pickle.dump({
+                        "model_name": self.model_name,
+                        "chunks": self.chunks,
+                        "embeddings": self.embeddings
+                    }, f)
+                logger.info(f"Embeddings disimpan ke cache")
+        except Exception as e:
+            logger.error(f"Error saat membuat embeddings: {e}")
+            sys.exit(1)
+    
+    def _create_index(self):
+        """Membuat index FAISS untuk pencarian cepat"""
+        if self.embeddings is None or len(self.embeddings) == 0:
+            self._create_embeddings()
+            
+        # Pastikan embeddings valid setelah _create_embeddings
+        if self.embeddings is None or len(self.embeddings) == 0:
+            logger.error("Gagal membuat embeddings untuk index")
+            return
+        
+        try:
+            import faiss
+            
+            logger.info("Membuat index FAISS...")
+            start_time = time.time()
+            
+            # Normalisasi embeddings
+            dimension = self.embeddings.shape[1]
+            
+            # Buat index L2
+            self.index = faiss.IndexFlatL2(dimension)
+            
+            # Tambahkan embeddings ke index
+            self.index.add(self.embeddings.astype('float32'))
+            
+            elapsed = time.time() - start_time
+            logger.info(f"Index berhasil dibuat dalam {elapsed:.2f} detik")
+            return True
+        except ImportError:
+            logger.error("faiss-cpu tidak ditemukan. Menginstal dengan 'pip install faiss-cpu'")
+            return False
+        except Exception as e:
+            logger.error(f"Error saat membuat index: {e}")
+            return False
+    
+    def retrieve(self, query: str, top_k: int = 5, min_score: float = 0.0) -> List[Dict[str, Any]]:
+        """
+        Mengambil dokumen yang paling relevan dengan query
+        
+        Args:
+            query: Query pencarian
+            top_k: Jumlah dokumen teratas yang akan dikembalikan
+            min_score: Parameter tidak digunakan, hanya untuk kompatibilitas dengan BM25Retriever
+            
+        Returns:
+            List dokumen yang relevan dengan skor
+        """
+        # Pastikan model tersedia
+        if self.model is None:
+            try:
+                self._initialize_model()
+            except Exception as e:
+                logger.error(f"Gagal menginisialisasi model: {e}")
+                return []
+        
+        # Pastikan index tersedia
+        if self.index is None:
+            success = self._create_index()
+            if not success:
+                logger.error("Gagal membuat index FAISS")
+                return []
+        
+        try:
+            # Pastikan model dan index tersedia
+            if self.model is None or self.index is None:
+                logger.error("Model atau index tidak tersedia")
+                return []
+                
+            # Encode query
+            query_text = self._format_query(query) if self._use_e5_format else query
+            encode_kwargs = {}
+            if self._use_e5_format:
+                encode_kwargs["normalize_embeddings"] = True
+            query_embedding = self.model.encode([query_text], **encode_kwargs)[0].reshape(1, -1).astype('float32')
+            
+            # Cari dokumen terdekat
+            distances, indices = self.index.search(query_embedding, min(top_k, len(self.chunks)))
+            
+            # Periksa apakah hasil pencarian valid
+            if indices.size == 0 or distances.size == 0:
+                logger.warning("Hasil pencarian kosong")
+                return []
+            
+            # Konversi jarak ke skor (semakin kecil jarak, semakin besar skor)
+            max_distance = np.max(distances) if distances.size > 0 else 1.0
+            if max_distance == 0:
+                max_distance = 1.0
+            
+            results = []
+            for i, (idx, distance) in enumerate(zip(indices[0], distances[0])):
+                # Pastikan indeks valid
+                if idx < 0 or idx >= len(self.chunks):
+                    logger.warning(f"Indeks tidak valid: {idx}")
+                    continue
+                    
+                # Konversi jarak ke skor (1 - jarak/max_distance)
+                score = 1.0 - (distance / max_distance)
+                
+                results.append({
+                    "chunk": self.chunks[idx],
+                    "score": float(score),
+                    "index": int(idx),
+                    "distance": float(distance)
+                })
+            
+            return results
+        except Exception as e:
+            logger.error(f"Error saat melakukan retrieval: {e}")
+            return []
+    
+    def _format_query(self, query: str) -> str:
+        if not query:
+            return ""
+        formatted = query.strip()
+        return f"query: {formatted}" if self._use_e5_format else formatted
+    
+    def _format_passage(self, passage: str) -> str:
+        if not passage:
+            return ""
+        formatted = passage.strip()
+        return f"passage: {formatted}" if self._use_e5_format else formatted
+    
+    def save(self, path: str):
+        """
+        Menyimpan model retriever ke file
+        
+        Args:
+            path: Path untuk menyimpan model
+        """
+        if self.embeddings is None or len(self.embeddings) == 0:
+            logger.error("Tidak ada embeddings untuk disimpan")
+            return
+        
+        try:
+            os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
+            
+            save_data = {
+                "model_name": self.model_name,
+                "chunks": self.chunks,
+                "embeddings": self.embeddings
+            }
+            
+            with open(path, "wb") as f:
+                pickle.dump(save_data, f)
+            
+            logger.info(f"Model berhasil disimpan ke {path}")
+        except Exception as e:
+            logger.error(f"Error saat menyimpan model: {e}")
+    
+    @classmethod
+    def load(cls, path: str) -> 'DenseRetriever':
+        """
+        Memuat model retriever dari file
+        
+        Args:
+            path: Path untuk memuat model
+            
+        Returns:
+            Instance DenseRetriever
+        """
+        try:
+            with open(path, "rb") as f:
+                data = pickle.load(f)
+            
+            # Periksa apakah format data valid
+            required_keys = ["chunks", "embeddings"]
+            for key in required_keys:
+                if key not in data:
+                    logger.error(f"Format data tidak valid: kunci '{key}' tidak ditemukan")
+                    return None
+            
+            # Gunakan model_name default jika tidak ada dalam data
+            model_name = data.get("model_name", "sentence-transformers/all-MiniLM-L6-v2")
+            
+            # Buat instance retriever baru
+            retriever = cls(chunks=data["chunks"], model_name=model_name)
+            retriever.embeddings = data["embeddings"]
+            
+            # Buat index jika embeddings tersedia
+            if retriever.embeddings is not None and len(retriever.embeddings) > 0:
+                retriever._create_index()
+                logger.info(f"Model berhasil dimuat dari {path}")
+                return retriever
+            else:
+                logger.error("Embeddings kosong atau tidak valid")
+                return None
+        except KeyError as e:
+            logger.error(f"Format data tidak valid: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Error saat memuat model: {e}")
+            return None
 
-    def __init__(self, sparse_retriever: BM25Retriever, dense_retriever: DenseRetriever, alpha: float = 0.5):
+class HybridRetriever:
+    """Kombinasi sparse (BM25) dan dense retriever dengan penggabungan skor ter-normalisasi dan adaptive alpha."""
+
+    def __init__(self, sparse_retriever: BM25Retriever, dense_retriever: DenseRetriever, alpha: float = 0.5, 
+                 use_adaptive: bool = True, adaptive_method: str = "confidence"):
         """
         Args:
             sparse_retriever: Instance BM25Retriever.
             dense_retriever: Instance DenseRetriever.
-            alpha: Bobot kontribusi skor sparse. (0-1)
+            alpha: Bobot kontribusi skor sparse default. (0-1)
+            use_adaptive: Jika True, gunakan adaptive alpha per query.
+            adaptive_method: Metode adaptive - "confidence", "score_distribution", atau "overlap"
         """
         self.sparse_retriever = sparse_retriever
         self.dense_retriever = dense_retriever
-        self.alpha = max(0.0, min(1.0, alpha))
+        self.default_alpha = max(0.0, min(1.0, alpha))
+        self.use_adaptive = use_adaptive
+        self.adaptive_method = adaptive_method
         # Gunakan chunk dari retriever sparse jika tersedia, fallback ke dense
         self.chunks = getattr(sparse_retriever, "chunks", None) or getattr(dense_retriever, "chunks", [])
 
@@ -339,6 +656,90 @@ class HybridRetriever:
             else:
                 normalized[idx] = 1.0
         return normalized
+    
+    def _compute_adaptive_alpha(self, sparse_results: List[Dict[str, Any]], 
+                               dense_results: List[Dict[str, Any]],
+                               sparse_norm: Dict[int, float],
+                               dense_norm: Dict[int, float]) -> float:
+        """
+        Hitung adaptive alpha berdasarkan karakteristik query dan hasil retrieval.
+        
+        Returns:
+            float: Alpha value antara 0-1 (bobot untuk sparse retriever)
+        """
+        if self.adaptive_method == "confidence":
+            # Metode 1: Berdasarkan confidence dari top-k results
+            # Jika sparse memiliki confidence tinggi (gap besar antara top-1 dan top-2), 
+            # berikan bobot lebih ke sparse
+            sparse_scores = [r["score"] for r in sparse_results[:5]] if sparse_results else []
+            dense_scores = [r["score"] for r in dense_results[:5]] if dense_results else []
+            
+            # Hitung confidence gap (selisih antara top-1 dan top-2)
+            sparse_conf = 0.0
+            if len(sparse_scores) >= 2:
+                sparse_conf = sparse_scores[0] - sparse_scores[1] if sparse_scores[0] > 0 else 0.0
+            
+            dense_conf = 0.0
+            if len(dense_scores) >= 2:
+                dense_conf = dense_scores[0] - dense_scores[1] if dense_scores[0] > 0 else 0.0
+            
+            # Normalisasi confidence
+            total_conf = sparse_conf + dense_conf
+            if total_conf > 0:
+                # Semakin tinggi confidence sparse, semakin tinggi alpha
+                alpha = 0.3 + 0.4 * (sparse_conf / total_conf)  # Range: 0.3 - 0.7
+            else:
+                alpha = self.default_alpha
+                
+        elif self.adaptive_method == "score_distribution":
+            # Metode 2: Berdasarkan distribusi skor
+            # Jika sparse memiliki skor rata-rata lebih tinggi, berikan bobot lebih
+            sparse_scores = [r["score"] for r in sparse_results[:10]] if sparse_results else [0.0]
+            dense_scores = [r["score"] for r in dense_results[:10]] if dense_results else [0.0]
+            
+            sparse_avg = sum(sparse_scores) / len(sparse_scores) if sparse_scores else 0.0
+            dense_avg = sum(dense_scores) / len(dense_scores) if dense_scores else 0.0
+            
+            total_avg = sparse_avg + dense_avg
+            if total_avg > 0:
+                alpha = 0.2 + 0.6 * (sparse_avg / total_avg)  # Range: 0.2 - 0.8
+            else:
+                alpha = self.default_alpha
+                
+        elif self.adaptive_method == "overlap":
+            # Metode 3: Berdasarkan overlap antara hasil sparse dan dense
+            # Jika overlap tinggi, gunakan bobot seimbang; jika rendah, prioritaskan yang lebih confident
+            sparse_indices = set(sparse_norm.keys())
+            dense_indices = set(dense_norm.keys())
+            
+            if sparse_indices and dense_indices:
+                overlap = len(sparse_indices & dense_indices)
+                union = len(sparse_indices | dense_indices)
+                overlap_ratio = overlap / union if union > 0 else 0.0
+                
+                # Jika overlap tinggi (>0.5), gunakan balanced alpha
+                # Jika overlap rendah, cek mana yang lebih confident
+                if overlap_ratio > 0.5:
+                    alpha = 0.5  # Balanced
+                else:
+                    # Hitung average normalized score
+                    sparse_avg = sum(sparse_norm.values()) / len(sparse_norm) if sparse_norm else 0.0
+                    dense_avg = sum(dense_norm.values()) / len(dense_norm) if dense_norm else 0.0
+                    
+                    total_avg = sparse_avg + dense_avg
+                    if total_avg > 0:
+                        alpha = 0.3 + 0.4 * (sparse_avg / total_avg)  # Range: 0.3 - 0.7
+                    else:
+                        alpha = self.default_alpha
+            else:
+                alpha = self.default_alpha
+        else:
+            # Default ke fixed alpha
+            alpha = self.default_alpha
+        
+        # Clamp alpha ke range [0.2, 0.8] untuk menghindari extreme values
+        alpha = max(0.2, min(0.8, alpha))
+        return alpha
 
     def retrieve(self, query: str, top_k: int = 5, min_score: float = 0.0) -> List[Dict[str, Any]]:
         top_k = max(1, top_k)
@@ -350,12 +751,20 @@ class HybridRetriever:
         sparse_norm = self._normalize_scores(sparse_results)
         dense_norm = self._normalize_scores(dense_results)
 
+        # Hitung adaptive alpha jika diaktifkan
+        if self.use_adaptive:
+            alpha = self._compute_adaptive_alpha(sparse_results, dense_results, sparse_norm, dense_norm)
+            logger.info(f"Adaptive alpha computed: {alpha:.3f} (method: {self.adaptive_method})")
+        else:
+            alpha = self.default_alpha
+            logger.info(f"Using fixed alpha: {alpha:.3f}")
+
         all_indices = set(sparse_norm.keys()) | set(dense_norm.keys())
         combined = []
         for idx in all_indices:
             sparse_score = sparse_norm.get(idx, 0.0)
             dense_score = dense_norm.get(idx, 0.0)
-            combined_score = self.alpha * sparse_score + (1.0 - self.alpha) * dense_score
+            combined_score = alpha * sparse_score + (1.0 - alpha) * dense_score
             if idx < 0 or idx >= len(self.chunks):
                 continue
             combined.append({
@@ -363,7 +772,8 @@ class HybridRetriever:
                 "score": combined_score,
                 "index": idx,
                 "sparse_score": sparse_score,
-                "dense_score": dense_score
+                "dense_score": dense_score,
+                "alpha_used": alpha  # Simpan alpha yang digunakan untuk debugging
             })
 
         # Jika tidak ada kombinasi menghasilkan skor, fallback ke sparse
@@ -1416,7 +1826,7 @@ def main():
     """Fungsi utama program"""
     parser = argparse.ArgumentParser(description="Sistem Penilaian Otomatis Jawaban Siswa")
     parser.add_argument("--pdf", type=str, default="BUKU_IPA.pdf", help="Path ke file PDF referensi")
-    parser.add_argument("--model", type=str, default="models/Llama-3.2-8B-Instruct-Q8_0.gguf", 
+    parser.add_argument("--model", type=str, default="models/gemma-3-12b-it-q4_0.gguf", 
                         help="Path ke model LLM")
     parser.add_argument("--llama-path", type=str, help="Path ke binary llama-run.exe")
     parser.add_argument("--question", type=str, help="Pertanyaan untuk dievaluasi")
@@ -1429,6 +1839,11 @@ def main():
                         help="Jumlah layer yang akan dijalankan di GPU (default: 999)")
     parser.add_argument("--ctx-size", type=int, default=16384, 
                         help="Ukuran konteks maksimum (default: 16384)")
+    parser.add_argument("--adaptive-alpha", action="store_true", default=True,
+                        help="Gunakan adaptive alpha untuk hybrid retrieval (default: True)")
+    parser.add_argument("--adaptive-method", type=str, default="confidence",
+                        choices=["confidence", "score_distribution", "overlap"],
+                        help="Metode adaptive alpha: confidence, score_distribution, atau overlap (default: confidence)")
     
     args = parser.parse_args()
     

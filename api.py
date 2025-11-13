@@ -33,8 +33,7 @@ current_dir = Path(__file__).parent.absolute()
 if str(current_dir) not in sys.path:
     sys.path.append(str(current_dir))
 
-from aes_system import DocumentProcessor, BM25Retriever, LlamaModelCpp, AnswerEvaluator
-from dense_retriever import DenseRetriever, compare_retrievers
+from aes_system import DocumentProcessor, BM25Retriever, LlamaModelCpp, AnswerEvaluator, DenseRetriever, HybridRetriever
 
 # Inisialisasi Flask app
 app = Flask(__name__)
@@ -393,18 +392,19 @@ def initialize_template_data():
 # Variabel global untuk menyimpan instance AES
 aes_processor = None
 aes_retriever = None
+aes_sparse_retriever = None  # BM25 retriever untuk compare
 aes_dpr_retriever = None
 aes_model = None
 aes_evaluator = None
 
 def initialize_aes():
     """Inisialisasi komponen AES"""
-    global aes_processor, aes_retriever, aes_dpr_retriever, aes_model, aes_evaluator
+    global aes_processor, aes_retriever, aes_sparse_retriever, aes_dpr_retriever, aes_model, aes_evaluator
     
     try:
         # Path ke file PDF dan model
         pdf_path = os.path.join(current_dir, "BUKU_IPA.pdf")
-        model_path = os.path.join(current_dir, "models", "Llama-3.2-8B-Instruct-Q8_0.gguf")
+        model_path = os.path.join(current_dir, "models", "gemma-3-12b-it-q4_0.gguf")
         
         # Cek apakah file ada dan berikan pesan error yang lebih detail
         if not os.path.exists(pdf_path):
@@ -429,7 +429,7 @@ def initialize_aes():
         logger.info(f"Dokumen berhasil dibagi menjadi {len(chunks)} chunk")
         
         logger.info("Menginisialisasi BM25 retriever...")
-        aes_retriever = BM25Retriever(chunks)
+        aes_sparse_retriever = BM25Retriever(chunks)
         
         # Inisialisasi DPR retriever
         logger.info("Menginisialisasi DPR retriever...")
@@ -480,6 +480,22 @@ def initialize_aes():
             logger.error(f"Error saat inisialisasi DPR: {e}")
             logger.info("Melanjutkan tanpa DPR retriever...")
             aes_dpr_retriever = None
+        
+        # Inisialisasi Hybrid Retriever dengan adaptive alpha jika DPR tersedia
+        if aes_dpr_retriever:
+            logger.info("Menginisialisasi Hybrid Retriever dengan adaptive alpha...")
+            aes_retriever = HybridRetriever(
+                sparse_retriever=aes_sparse_retriever,
+                dense_retriever=aes_dpr_retriever,
+                alpha=0.5,  # Default alpha
+                use_adaptive=True,  # Aktifkan adaptive alpha
+                adaptive_method="confidence"  # Metode: confidence, score_distribution, atau overlap
+            )
+            logger.info("Hybrid Retriever dengan adaptive alpha berhasil diinisialisasi")
+        else:
+            # Fallback ke sparse retriever jika DPR tidak tersedia
+            logger.info("Menggunakan BM25 Retriever (sparse) saja...")
+            aes_retriever = aes_sparse_retriever
         
         logger.info(f"Memuat model LLM: {model_path}")
         try:
@@ -1831,6 +1847,48 @@ def evaluate_answer(answer_id):
         logger.error(f"Error saat evaluasi jawaban: {e}")
         return jsonify({"error": str(e)}), 500
 
+def compare_retrievers(query: str, sparse_retriever, dense_retriever, top_k: int = 5, normalize_scores: bool = True) -> Dict[str, Any]:
+    """
+    Membandingkan hasil retrieval dari sparse (BM25) dan dense (DPR) retriever
+    
+    Args:
+        query: Query pencarian
+        sparse_retriever: Instance BM25Retriever atau sparse retriever lainnya
+        dense_retriever: Instance DenseRetriever
+        top_k: Jumlah dokumen teratas yang akan dikembalikan
+        normalize_scores: Apakah skor perlu dinormalisasi
+        
+    Returns:
+        Dictionary berisi hasil perbandingan
+    """
+    import time
+    
+    # Retrieve dengan BM25
+    start_time = time.time()
+    bm25_results = sparse_retriever.retrieve(query, top_k=top_k, min_score=0.5)
+    bm25_time = time.time() - start_time
+    
+    # Retrieve dengan DPR
+    start_time = time.time()
+    dpr_results = dense_retriever.retrieve(query, top_k=top_k)
+    dpr_time = time.time() - start_time
+    
+    # Hitung overlap
+    bm25_indices = set(r.get("index", -1) for r in bm25_results)
+    dpr_indices = set(r.get("index", -1) for r in dpr_results)
+    overlap = len(bm25_indices & dpr_indices)
+    overlap_percentage = (overlap / top_k * 100) if top_k > 0 else 0.0
+    
+    return {
+        "query": query,
+        "bm25_results": bm25_results,
+        "dpr_results": dpr_results,
+        "bm25_time": bm25_time,
+        "dpr_time": dpr_time,
+        "overlap": overlap,
+        "overlap_percentage": overlap_percentage
+    }
+
 @app.route('/api/compare-rag', methods=['POST'])
 def compare_rag_api():
     """Membandingkan hasil RAG (BM25 vs DPR)"""
@@ -1865,11 +1923,11 @@ def compare_rag_api():
             }), 500
         
         # Jika DPR retriever tersedia, gunakan untuk perbandingan
-        if aes_dpr_retriever:
+        if aes_dpr_retriever and aes_sparse_retriever:
             logger.info("Menggunakan DPR retriever untuk perbandingan")
             # Gunakan fungsi compare_retrievers untuk mendapatkan hasil perbandingan
             try:
-                comparison = compare_retrievers(question, aes_retriever, aes_dpr_retriever, top_k=5, normalize_scores=True)
+                comparison = compare_retrievers(question, aes_sparse_retriever, aes_dpr_retriever, top_k=5, normalize_scores=True)
                 logger.info(f"Perbandingan berhasil: {len(comparison['bm25_results'])} hasil BM25, {len(comparison['dpr_results'])} hasil DPR")
                 
                 return jsonify({

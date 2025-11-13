@@ -9,15 +9,14 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import cohen_kappa_score, confusion_matrix, classification_report
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from aes_system import DocumentProcessor, BM25Retriever, LlamaModelCpp, AnswerEvaluator, HybridRetriever
-from dense_retriever import DenseRetriever
+from aes_system import DocumentProcessor, BM25Retriever, LlamaModelCpp, AnswerEvaluator, HybridRetriever, DenseRetriever
 import logging
 
 # ===========================
 # KONFIGURASI DASAR
 # ===========================
 PDF_PATH = "BUKU_IPA.pdf"
-MODEL_PATH = "models/Llama-3.2-8B-Instruct-Q8_0.gguf"  # versi lebih ringan
+MODEL_PATH = "models/gemma-3-12b-it-q4_0.gguf"  # Gemma 3 12B Instruct Q4_0
 LLAMA_RUN_PATH = "llama.cpp/build/bin/Release/llama-run.exe"
 DATASET_PATH = r"D:\TugasAkhir\aes1\aes1\aes_dateset2.csv"
 OUTPUT_PATH = "results_bm25_safe.json"
@@ -185,12 +184,19 @@ def save_mode_outputs(mode_name, results, df_result, metrics, type_suffix=""):
     json_path = RESULTS_JSON_TEMPLATE.format(mode=f"{mode_name}{suffix}")
     csv_path = RESULTS_CSV_TEMPLATE.format(mode=f"{mode_name}{suffix}")
 
-    # Simpan JSON
+    # Simpan JSON dengan metadata
     payload = {
-        "mode": mode_name,
+        "metadata": {
+            "model_used": MODEL_PATH,
+            "model_name": os.path.basename(MODEL_PATH),
+            "pdf_source": PDF_PATH,
+            "evaluation_date": time.strftime("%Y-%m-%d"),
+            "evaluation_datetime": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "mode": mode_name,
+            "question_type_filter": suffix.lstrip("_") if suffix else "all"
+        },
         "results": results,
-        "metrics": metrics,
-        "question_type_filter": suffix.lstrip("_") if suffix else "all"
+        "metrics": metrics
     }
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -387,6 +393,11 @@ def main():
         combined_csv_path = None
 
     summary_payload = {
+        "model_used": MODEL_PATH,
+        "model_name": os.path.basename(MODEL_PATH),
+        "pdf_source": PDF_PATH,
+        "evaluation_date": time.strftime("%Y-%m-%d"),
+        "evaluation_datetime": time.strftime("%Y-%m-%d %H:%M:%S"),
         "total_answers": int(len(df)),
         "total_time_seconds": float(total_time),
         "summary": comparison_summary,
