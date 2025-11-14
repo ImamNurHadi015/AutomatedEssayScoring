@@ -16,10 +16,9 @@ import logging
 # KONFIGURASI DASAR
 # ===========================
 PDF_PATH = "BUKU_IPA.pdf"
-MODEL_PATH = "models/gemma-3-12b-it-q4_0.gguf"  # Gemma 3 12B Instruct Q4_0
+MODEL_PATH = "models/Llama-3.2-8B-Instruct-Q8_0.gguf"
 LLAMA_RUN_PATH = "llama.cpp/build/bin/Release/llama-run.exe"
-DATASET_PATH = r"D:\TugasAkhir\aes1\aes1\aes_dateset2.csv"
-OUTPUT_PATH = "results_bm25_safe.json"
+DATASET_PATH = "aes_dateset2.csv"
 
 MAX_TOKENS = 256
 CTX_SIZE = 4096
@@ -29,7 +28,7 @@ SAFE_RAM_THRESHOLD = 14  # GB
 
 # Logging setup - Ubah ke INFO untuk debugging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-logger = logging.getLogger("AES_BM25_SAFE")
+logger = logging.getLogger("AES_Dataset")
 
 RESULTS_JSON_TEMPLATE = "results_{mode}_rag.json"
 RESULTS_CSV_TEMPLATE = "results_{mode}_rag.csv"
