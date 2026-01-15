@@ -62,8 +62,8 @@ const navigateTo = (path) => {
           <i class="pi pi-list feature-icon"></i>
         </span>
         <div class="feature-content">
-          <h3 class="feature-title">Kelola Ujian</h3>
-          <p class="feature-description">Daftar ujian yang telah dibuat</p>
+          <h3 class="feature-title">Kelola Paket Soal</h3>
+          <p class="feature-description">Daftar paket soal yang telah dibuat</p>
         </div>
       </div>
       
@@ -72,8 +72,8 @@ const navigateTo = (path) => {
           <i class="pi pi-plus feature-icon"></i>
         </span>
         <div class="feature-content">
-          <h3 class="feature-title">Buat Ujian</h3>
-          <p class="feature-description">Buat ujian dengan soal esai</p>
+          <h3 class="feature-title">Buat Paket Soal</h3>
+          <p class="feature-description">Buat paket soal dengan soal esai</p>
         </div>
       </div>
 

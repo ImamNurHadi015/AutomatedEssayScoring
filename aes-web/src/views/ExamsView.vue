@@ -87,8 +87,8 @@ watch(
 <template>
   <div class="exams-page">
     <div class="page-header">
-      <h1>Daftar Ujian</h1>
-      <Button label="Buat Ujian Baru" icon="pi pi-plus" @click="createExam" class="p-button-success" />
+      <h1>Daftar Paket Soal</h1>
+      <Button label="Buat Paket Soal Baru" icon="pi pi-plus" @click="createExam" class="p-button-success" />
     </div>
 
     <Card class="card">
@@ -104,8 +104,8 @@ watch(
         </div>
         
         <div v-else-if="exams.length === 0" class="empty-container">
-          <p>Belum ada ujian yang dibuat.</p>
-          <Button label="Buat Ujian Baru" icon="pi pi-plus" @click="createExam" class="mt-4" />
+          <p>Belum ada paket soal yang dibuat.</p>
+          <Button label="Buat Paket Soal Baru" icon="pi pi-plus" @click="createExam" class="mt-4" />
         </div>
         
         <DataTable v-else :value="exams" stripedRows paginator :rows="10" 

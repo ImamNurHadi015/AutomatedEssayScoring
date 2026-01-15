@@ -45,7 +45,7 @@ const menuItems = ref([
     icon: 'pi pi-fw pi-file',
     items: [
       {
-        label: 'Daftar Ujian',
+        label: 'Daftar Paket Soal',
         icon: 'pi pi-fw pi-list',
         command: () => {
           if (navHelper.value) {
@@ -54,7 +54,7 @@ const menuItems = ref([
         }
       },
       {
-        label: 'Buat Ujian Baru',
+        label: 'Buat Paket Soal Baru',
         icon: 'pi pi-fw pi-plus',
         command: () => {
           if (navHelper.value) {

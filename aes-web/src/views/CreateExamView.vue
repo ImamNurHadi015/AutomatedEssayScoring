@@ -92,7 +92,7 @@ const cancelCreate = () => {
     <Toast />
     
     <div class="page-header">
-      <h1>Buat Ujian Baru</h1>
+      <h1>Buat Paket Soal Baru</h1>
       <!-- Debug info -->
       <div class="debug-info" style="color: green; margin-bottom: 10px;">
         Halaman CreateExamView berhasil dimuat
