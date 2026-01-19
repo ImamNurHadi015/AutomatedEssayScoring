@@ -1,0 +1,13 @@
+numpy==1.24.3
+PyPDF2==3.0.1
+rank-bm25==0.2.2
+scikit-learn==1.3.2
+
+# Dense/DPR (dibutuhkan jika menjalankan mode "dense" atau "hybrid")
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+tqdm==4.66.1
+
+# Utilitas untuk evaluasi paralel/monitor resource (dipakai di get_safe_worker_count)
+psutil==5.9.8
+gputil==1.4.0
